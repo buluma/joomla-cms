@@ -17,7 +17,7 @@
  * - /usr/bin/php /path/to/joomla-cms/build/bump.php -v 3.7.0
  *
  * @package    Joomla.Build
- * @copyright  Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -36,7 +36,7 @@ function usage($command)
 const PHP_TAB = "\t";
 
 // File paths.
-$versionFile      = '/libraries/cms/version/version.php';
+$versionFile      = '/libraries/src/Version.php';
 
 $coreXmlFiles     = array(
 			'/administrator/manifests/files/joomla.xml',
@@ -53,6 +53,25 @@ $languageXmlFiles = array(
 $languagePackXmlFile = '/administrator/manifests/packages/pkg_en-GB.xml';
 
 $antJobFile = '/build.xml';
+
+$readMeFiles = array(
+			'/README.md',
+			'/README.txt',
+			);
+
+// Change copyright date exclusions. Some systems may try to scan the .git directory, exclude it.
+$directoryLoopExcludeDirectories = array(
+			'/.git',
+			'/libraries/vendor/',
+			'/libraries/phputf8/',
+			'/libraries/php-encryption/',
+			'/libraries/phpass/',
+			'/libraries/idna_convert/',
+			'/libraries/fof/',
+			);
+
+$directoryLoopExcludeFiles = array(
+			);
 
 // Check arguments (exit if incorrect cli arguments).
 $opts = getopt("v:c:");
@@ -132,6 +151,10 @@ $versionSubParts = explode('.', $versionParts[0]);
 
 $version = array(
 		'main'       => $versionSubParts[0] . '.' . $versionSubParts[1],
+		'major'      => $versionSubParts[0],
+		'minor'      => $versionSubParts[1],
+		'patch'      => $versionSubParts[2],
+		'extra'      => (!empty($versionParts[1]) ? $versionParts[1] : '') . (!empty($versionParts[2]) ? (!empty($versionParts[1]) ? '-' : '') . $versionParts[2] : ''),
 		'release'    => $versionSubParts[0] . '.' . $versionSubParts[1] . '.' . $versionSubParts[2],
 		'dev_devel'  => $versionSubParts[2] . (!empty($versionParts[1]) ? '-' . $versionParts[1] : '') . (!empty($versionParts[2]) ? '-' . $versionParts[2] : ''),
 		'dev_status' => $dev_status,
@@ -173,6 +196,10 @@ $rootPath = dirname(__DIR__);
 if (file_exists($rootPath . $versionFile))
 {
 	$fileContents = file_get_contents($rootPath . $versionFile);
+	$fileContents = preg_replace("#MAJOR_VERSION\s*=\s*[^;]*#", "MAJOR_VERSION = " . $version['major'], $fileContents);
+	$fileContents = preg_replace("#MINOR_VERSION\s*=\s*[^;]*#", "MINOR_VERSION = " . $version['minor'], $fileContents);
+	$fileContents = preg_replace("#PATCH_VERSION\s*=\s*[^;]*#", "PATCH_VERSION = " . $version['patch'], $fileContents);
+	$fileContents = preg_replace("#EXTRA_VERSION\s*=\s*'[^\']*'#", "EXTRA_VERSION = '" . $version['extra'] . "'", $fileContents);
 	$fileContents = preg_replace("#RELEASE\s*=\s*'[^\']*'#", "RELEASE = '" . $version['main'] . "'", $fileContents);
 	$fileContents = preg_replace("#DEV_LEVEL\s*=\s*'[^\']*'#", "DEV_LEVEL = '" . $version['dev_devel'] . "'", $fileContents);
 	$fileContents = preg_replace("#DEV_STATUS\s*=\s*'[^\']*'#", "DEV_STATUS = '" . $version['dev_status'] . "'", $fileContents);
@@ -226,6 +253,102 @@ if (file_exists($rootPath . $antJobFile))
 	$fileContents = file_get_contents($rootPath . $antJobFile);
 	$fileContents = preg_replace('#<arg value="Joomla! CMS [^ ]* API" />#', '<arg value="Joomla! CMS ' . $version['main'] . ' API" />', $fileContents);
 	file_put_contents($rootPath . $antJobFile, $fileContents);
+}
+
+// Updates the version in readme files.
+foreach ($readMeFiles as $readMeFile)
+{
+	if (file_exists($rootPath . $readMeFile))
+	{
+		$fileContents = file_get_contents($rootPath . $readMeFile);
+		$fileContents = preg_replace('#Joomla! [0-9]+\.[0-9]+ (|\[)version#', 'Joomla! ' . $version['main'] . ' $1version', $fileContents);
+		$fileContents = preg_replace('#Joomla_[0-9]+\.[0-9]+_version#', 'Joomla_' . $version['main'] . '_version', $fileContents);
+		file_put_contents($rootPath . $readMeFile, $fileContents);
+	}
+}
+
+// Updates the copyright date in core files.
+$changedFilesCopyrightDate = 0;
+$changedFilesSinceVersion  = 0;
+$year                      = date('Y');
+$directory                 = new \RecursiveDirectoryIterator($rootPath);
+$iterator                  = new \RecursiveIteratorIterator($directory, RecursiveIteratorIterator::SELF_FIRST);
+
+foreach ($iterator as $file)
+{
+	if ($file->isFile())
+	{
+		$filePath     = $file->getPathname();
+		$relativePath = str_replace($rootPath, '', $filePath);
+
+		// Exclude certain extensions.
+		if (preg_match('#\.(png|jpeg|jpg|gif|bmp|ico|webp|svg|woff|woff2|ttf|eot)$#', $filePath))
+		{
+			continue;
+		}
+
+		// Exclude certain files.
+		if (in_array($relativePath, $directoryLoopExcludeFiles))
+		{
+			continue;
+		}
+
+		// Exclude certain directories.
+		$continue = true;
+
+		foreach ($directoryLoopExcludeDirectories as $excludeDirectory)
+		{
+			if (preg_match('#^' . preg_quote($excludeDirectory) . '#', $relativePath))
+			{
+				$continue = false;
+				break;
+			}
+		}
+
+		if ($continue)
+		{
+			$changeSinceVersion  = false;
+			$changeCopyrightDate = false;
+
+			// Load the file.
+			$fileContents = file_get_contents($filePath);
+
+			// Check if need to change the copyright date.
+			if (preg_match('#2005\s+-\s+[0-9]{4}\s+Open\s+Source\s+Matters#', $fileContents) && !preg_match('#2005\s+-\s+' . $year. '\s+Open\s+Source\s+Matters#', $fileContents))
+			{
+				$changeCopyrightDate = true;
+				$fileContents = preg_replace('#2005\s+-\s+[0-9]{4}\s+Open\s+Source\s+Matters#', '2005 - ' . $year. ' Open Source Matters', $fileContents);
+				$changedFilesCopyrightDate++;
+			}
+
+			// Check if need to change the since version.
+			if ($relativePath !== '/build/bump.php' && preg_match('#__DEPLOY_VERSION__#', $fileContents))
+			{
+				$changeSinceVersion = true;
+				$fileContents = preg_replace('#__DEPLOY_VERSION__#', $version['release'], $fileContents);
+				$changedFilesSinceVersion++;
+			}
+
+			// Save the file.
+			if ($changeCopyrightDate || $changeSinceVersion)
+			{
+				file_put_contents($filePath, $fileContents);
+			}
+		}
+	}
+}
+
+if ($changedFilesCopyrightDate > 0 || $changedFilesSinceVersion > 0)
+{
+	if ($changedFilesCopyrightDate > 0)
+	{
+		echo '- Copyright Date changed in ' . $changedFilesCopyrightDate . ' files.' . PHP_EOL;
+	}
+	if ($changedFilesSinceVersion > 0)
+	{
+		echo '- Since Version changed in ' . $changedFilesSinceVersion . ' files.' . PHP_EOL;
+	}
+	echo PHP_EOL;
 }
 
 echo 'Version bump complete!' . PHP_EOL;
