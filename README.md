@@ -1,15 +1,11 @@
-Joomla! CMS™ [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cms/readme)](https://github.com/igrigorik/ga-beacon)
+Joomla! CMS™
 ====================
 
 Build Status
 ---------------------
-Travis-CI: [![Build Status](https://travis-ci.org/joomla/joomla-cms.svg?branch=staging)](https://travis-ci.org/joomla/joomla-cms)
-
-Drone -CI: [![Build Status](http://213.160.72.75/api/badges/joomla/joomla-cms/status.svg)](http://213.160.72.75/joomla/joomla-cms)
+Travis-CI: [![Build Status](https://travis-ci.org/buluma/joomla-cms.svg?branch=staging)](https://travis-ci.org/buluma/joomla-cms)
 
 AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/bpcxulw6nnxlv8kb/branch/staging?svg=true)](https://ci.appveyor.com/project/joomla/joomla-cms)
-
-Jenkins: [![Build Status](http://build.joomla.org/job/cms/badge/icon)](http://build.joomla.org/job/cms/)
 
 What is this?
 ---------------------
