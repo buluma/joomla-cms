@@ -1,7 +1,7 @@
 1- What is this?
 	* This is a Joomla! installation/upgrade package to version 3.x
 	* Joomla! Official site: https://www.joomla.org
-	* Joomla! 3.8 version history - https://docs.joomla.org/Special:MyLanguage/Joomla_3.8_version_history
+	* Joomla! 3.9 version history - https://docs.joomla.org/Special:MyLanguage/Joomla_3.9_version_history
 	* Detailed changes in the Changelog: https://github.com/joomla/joomla-cms/commits/staging
 
 2- What is Joomla?
@@ -13,7 +13,7 @@
 3- Is Joomla! for you?
 	* Joomla! is the right solution for most content web projects: https://docs.joomla.org/Special:MyLanguage/Portal:Learn_More
 	* See Joomla's core features - https://www.joomla.org/core-features.html
-	* Try out our online demo: https://demo.joomla.org
+	* Try out our free hosting service: https://launch.joomla.org
 
 4- How to find a Joomla! translation?
 	* Repository of accredited language packs: https://community.joomla.org/translations.html
@@ -50,7 +50,7 @@
 	* Find the information you need: https://docs.joomla.org/Special:MyLanguage/Start_here
 	* Find help and other users: https://www.joomla.org/about-joomla/create-and-share.html
 	* Post questions at our forums: https://forum.joomla.org
-	* Joomla! Resources Directory (JRD): https://resources.joomla.org/
+	* Joomla! Resources Directory (JRD): https://community.joomla.org/service-providers-directory/
 
 11- Do you already have a Joomla! site that's not built with Joomla! 3.x ?
 	* What's new in Joomla! 3.x: https://www.joomla.org/3
@@ -66,7 +66,6 @@
 	* Documentation for Web designers: https://docs.joomla.org/Special:MyLanguage/Web_designers
 
 Copyright:
-	* Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
-	* Special Thanks: https://docs.joomla.org/Special:MyLanguage/Joomla!_Credits_and_Thanks
+	* Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
 	* Distributed under the GNU General Public License version 2 or later
-	* See Licenses details at https://docs.joomla.org/Special:MyLanguage/Joomla_Licenses
+	* See License details at https://docs.joomla.org/Special:MyLanguage/Joomla_Licenses
