@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Component
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -237,7 +241,11 @@ class JComponentRouterRulesMenuTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   __DEPLOY_VERSION__
+=======
+	 * @since   3.8.2
+>>>>>>> upstream/staging
 	 */
 	public function testPreprocessActive()
 	{
@@ -266,6 +274,40 @@ class JComponentRouterRulesMenuTest extends TestCaseDatabase
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Tests the preprocess() method
+	 *
+	 * @return  void
+	 *
+	 * @since   3.8.2
+	 */
+	public function testPreprocessLayout()
+	{
+		$this->saveFactoryState();
+
+		$router = $this->object->get('router');
+
+		// Unset an active menu
+		$router->menu->active = null;
+
+		// Check link if default layout is set explicitly
+		$query = array('option' => 'com_content', 'view' => 'category', 'id' => '22', 'layout' => 'default');
+		$expect = array('option' => 'com_content', 'view' => 'category', 'id' => '22', 'Itemid' => '49', 'layout' => 'default');
+		$this->object->preprocess($query);
+		$this->assertEquals($expect, $query);
+
+		// Check link if the layout is different than in menu item for parent category
+		$query = array('option' => 'com_content', 'view' => 'category', 'id' => '22', 'layout' => 'blog');
+		$expect = array('option' => 'com_content', 'view' => 'category', 'id' => '22', 'Itemid' => '49', 'layout' => 'blog');
+		$this->object->preprocess($query);
+		$this->assertEquals($expect, $query);
+
+		$this->restoreFactoryState();
+	}
+
+	/**
+>>>>>>> upstream/staging
 	 * Tests the buildLookup() method
 	 *
 	 * @return  void

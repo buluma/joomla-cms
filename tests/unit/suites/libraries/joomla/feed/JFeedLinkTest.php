@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Feed
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Feed
- * @since       12.3
+ * @since       3.1.4
  */
 class JFeedLinkTest extends TestCase
 {
@@ -21,7 +25,7 @@ class JFeedLinkTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testConstruct()
 	{
@@ -41,7 +45,7 @@ class JFeedLinkTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testConstructWithInvalidLength()
 	{

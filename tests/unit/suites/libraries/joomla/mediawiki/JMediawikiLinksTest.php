@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Mediawiki
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,37 +17,61 @@
  * @package     Joomla.UnitTest
  * @subpackage  Mediawiki
  *
+<<<<<<< HEAD
  * @since       12.3
+=======
+ * @since       3.1.4
+>>>>>>> upstream/staging
  */
 class JMediawikiLinksTest extends \PHPUnit\Framework\TestCase
 {
 	/**
 	 * @var    JRegistry  Options for the Mediawiki object.
+<<<<<<< HEAD
 	 * @since  12.3
+=======
+	 * @since  3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected $options;
 
 	/**
 	 * @var    JMediawikiHttp  Mock client object.
+<<<<<<< HEAD
 	 * @since  12.3
+=======
+	 * @since  3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected $client;
 
 	/**
 	 * @var    JMediawikiLinks  Object under test.
+<<<<<<< HEAD
 	 * @since  12.3
+=======
+	 * @since  3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected $object;
 
 	/**
 	 * @var    string  Sample xml string.
+<<<<<<< HEAD
 	 * @since  12.3
+=======
+	 * @since  3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected $sampleString = '<a><b></b><c></c></a>';
 
 	/**
 	 * @var    string  Sample xml error message.
+<<<<<<< HEAD
 	 * @since  12.3
+=======
+	 * @since  3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected $errorString = '<message>Generic Error</message>';
 

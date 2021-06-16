@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Help
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -113,7 +117,7 @@ class JHelpTest extends TestCase
 	 */
 	public function testCreateSiteList()
 	{
-		$helpsite = array(
+		$helpsite = (object) array(
 			'text' => 'English (GB) help.joomla.org',
 			'value' => 'http://help.joomla.org'
 		);

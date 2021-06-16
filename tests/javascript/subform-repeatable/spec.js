@@ -2,7 +2,11 @@
  * @package     Joomla.Tests
  * @subpackage  JavaScript Tests
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  *
  * @since       3.6.3
@@ -39,6 +43,7 @@ define(['jquery', 'testsRoot/subform-repeatable/spec-setup', 'jasmineJquery'], f
 				expect($container.find('tbody').children().length).toEqual(2);
 			});
 
+<<<<<<< HEAD
 			it('Should fix the id of the template input checkbox element to "jform_group__group2__checkbox"', function () {
 				expect($container.find('#jform_group__groupX__checkbox')).not.toExist();
 				expect($container.find('#jform_group__group2__checkbox')).toExist();
@@ -59,6 +64,28 @@ define(['jquery', 'testsRoot/subform-repeatable/spec-setup', 'jasmineJquery'], f
 
 			it('Should fix the name of the template input radio element to "jform[group][group2][radio]"', function () {
 				expect($container.find('#jform_group__group2__radio0')).toHaveAttr('name','jform[group][group2][radio]');
+=======
+			it('Should fix the id of the template input checkbox element to "jform_group__group1__checkbox"', function () {
+				expect($container.find('#jform_group__groupX__checkbox')).not.toExist();
+				expect($container.find('#jform_group__group1__checkbox')).toExist();
+			});
+
+			it('Should fix the for attribute of the checkbox label element to match the changed input id', function () {
+				expect($container.find('label[for="jform_group__group1__checkbox"]')).toExist();
+			});
+
+			it('Should fix the name of the template input checkbox element to "jform[group][group1][checkbox]"', function () {
+				expect($container.find('#jform_group__group1__checkbox')).toHaveAttr('name','jform[group][group1][checkbox]');
+			});
+
+			it('Should fix the id of the template input radio element to "jform_group__group1__radio0"', function () {
+				expect($container.find('#jform_group__groupX__radio0')).not.toExist();
+				expect($container.find('#jform_group__group1__radio0')).toExist();
+			});
+
+			it('Should fix the name of the template input radio element to "jform[group][group1][radio]"', function () {
+				expect($container.find('#jform_group__group1__radio0')).toHaveAttr('name','jform[group][group1][radio]');
+>>>>>>> upstream/staging
 			});
 
 			it('Should have captured the template correctly', function () {
@@ -76,8 +103,13 @@ define(['jquery', 'testsRoot/subform-repeatable/spec-setup', 'jasmineJquery'], f
 				expect($container.find('tbody').children().last()).toHaveAttr('data-new', 'true');
 			});
 
+<<<<<<< HEAD
 			it('Should set data-group attribute to "group2" in the new element', function () {
 				expect($container.find('tbody').children().last()).toHaveAttr('data-group', 'group2');
+=======
+			it('Should set data-group attribute to "group1" in the new element', function () {
+				expect($container.find('tbody').children().last()).toHaveAttr('data-group', 'group1');
+>>>>>>> upstream/staging
 			});
 
 			it('Should trigger subform-row-add event', function () {

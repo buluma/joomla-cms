@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Database
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Database
- * @since       11.1
+ * @since       1.7.0
  */
 class JDatabaseQueryInspector extends JDatabaseQuery
 {
@@ -24,7 +28,7 @@ class JDatabaseQueryInspector extends JDatabaseQuery
 	 *
 	 * @return  void
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function __set($property, $value)
 	{
@@ -38,7 +42,7 @@ class JDatabaseQueryInspector extends JDatabaseQuery
 	 *
 	 * @return  mixed   The value of the class property.
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function get($property)
 	{

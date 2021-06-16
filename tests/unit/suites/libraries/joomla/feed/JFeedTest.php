@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Feed
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,13 +16,13 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Feed
- * @since       12.3
+ * @since       3.1.4
  */
 class JFeedTest extends TestCase
 {
 	/**
 	 * @var    JFeed
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_instance;
 
@@ -27,7 +31,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicGetSet()
 	{
@@ -45,7 +49,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicGetNull()
 	{
@@ -57,7 +61,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetUpdatedDateString()
 	{
@@ -73,7 +77,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetUpdatedDateJDateObject()
 	{
@@ -91,7 +95,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetAuthorWithPerson()
 	{
@@ -111,7 +115,7 @@ class JFeedTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testMagicSetAuthorWithInvalidAuthor()
 	{
@@ -124,7 +128,7 @@ class JFeedTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testMagicSetCategoriesWithInvalidProperty()
 	{
@@ -136,7 +140,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetGeneral()
 	{
@@ -152,7 +156,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testAddCategory()
 	{
@@ -168,7 +172,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testAddContributor()
 	{
@@ -197,7 +201,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testAddEntry()
 	{
@@ -225,7 +229,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testOffsetExists()
 	{
@@ -254,7 +258,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testOffsetGet()
 	{
@@ -284,7 +288,7 @@ class JFeedTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testOffsetSetWithString()
 	{
@@ -296,7 +300,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testOffsetSet()
 	{
@@ -317,7 +321,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testOffsetUnset()
 	{
@@ -339,7 +343,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRemoveCategory()
 	{
@@ -361,7 +365,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRemoveContributor()
 	{
@@ -386,7 +390,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRemoveEntry()
 	{
@@ -410,7 +414,7 @@ class JFeedTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testSetAuthor()
 	{
@@ -429,7 +433,11 @@ class JFeedTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::setUp()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{
@@ -444,7 +452,11 @@ class JFeedTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{

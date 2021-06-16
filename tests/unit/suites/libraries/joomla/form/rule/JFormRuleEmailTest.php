@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Form
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Form
- * @since       11.1
+ * @since       1.7.0
  */
 class JFormRuleEmailTest extends TestCase
 {
@@ -40,7 +44,7 @@ class JFormRuleEmailTest extends TestCase
 		$xml = simplexml_load_string('<form><field name="email1" /><field name="email2" unique="true" /></form>');
 
 		// Test fail conditions.
-		$this->assertFalse($rule->test($xml->field[0], 'ThisIsNotALoveSong'));
+		$this->assertInstanceOf('UnexpectedValueException', $rule->test($xml->field[0], 'ThisIsNotALoveSong'));
 	}
 
 
@@ -49,7 +53,7 @@ class JFormRuleEmailTest extends TestCase
 	 *
 	 * @return array
 	 *
-	 * @since 11.1
+	 * @since 1.7.0
 	 */
 	public function emailData1()
 	{
@@ -76,17 +80,21 @@ class JFormRuleEmailTest extends TestCase
 	 *
 	 * @return void
 	 *
-	 * @since 11.1
+	 * @since 1.7.0
 	 */
 	public function testEmailData($emailAddress, $expectedResult)
 	{
 		$rule = new JFormRuleEmail;
 		$xml = simplexml_load_string('<form><field name="email1" /></form>');
-		$this->assertThat(
-			$rule->test($xml->field[0], $emailAddress),
-			$this->equalTo($expectedResult),
-			$emailAddress . ' should have returned ' . ($expectedResult ? 'true' : 'false') . ' but did not'
-		);
+
+		if ($expectedResult === true)
+		{
+			$this->assertTrue($rule->test($xml->field[0], $emailAddress));
+		}
+		else
+		{
+			$this->assertInstanceOf('UnexpectedValueException', $rule->test($xml->field[0], $emailAddress));
+		}
 	}
 
 	/**
@@ -94,7 +102,7 @@ class JFormRuleEmailTest extends TestCase
 	 *
 	 * @return array
 	 *
-	 * @since 12.3
+	 * @since 3.1.4
 	 */
 	public function emailData2()
 	{
@@ -114,17 +122,21 @@ class JFormRuleEmailTest extends TestCase
 	 *
 	 * @return void
 	 *
-	 * @since 12.3
+	 * @since 3.1.4
 	 */
 	public function testEmailData2($emailAddress, $expectedResult)
 	{
 		$rule = new JFormRuleEmail;
 		$xml = simplexml_load_string('<form><field name="email1" multiple="multiple" /></form>');
-		$this->assertThat(
-			$rule->test($xml->field[0], $emailAddress),
-			$this->equalTo($expectedResult),
-			$emailAddress . ' should have returned ' . ($expectedResult ? 'true' : 'false') . ' but did not'
-		);
+
+		if ($expectedResult === true)
+		{
+			$this->assertTrue($rule->test($xml->field[0], $emailAddress));
+		}
+		else
+		{
+			$this->assertInstanceOf('UnexpectedValueException', $rule->test($xml->field[0], $emailAddress));
+		}
 	}
 
 	/**
@@ -132,7 +144,7 @@ class JFormRuleEmailTest extends TestCase
 	 *
 	 * @return array
 	 *
-	 * @since 12.3
+	 * @since 3.1.4
 	 */
 	public function emailData3()
 	{
@@ -155,16 +167,20 @@ class JFormRuleEmailTest extends TestCase
 	 *
 	 * @return void
 	 *
-	 * @since 12.3
+	 * @since 3.1.4
 	 */
 	public function testEmailData3($emailAddress, $expectedResult)
 	{
 		$rule = new JFormRuleEmail;
 		$xml = simplexml_load_string('<form><field name="email1" tld="tld" /></form>');
-		$this->assertThat(
-			$rule->test($xml->field[0], $emailAddress),
-			$this->equalTo($expectedResult),
-			$emailAddress . ' should have returned ' . ($expectedResult ? 'true' : 'false') . ' but did not'
-		);
+
+		if ($expectedResult === true)
+		{
+			$this->assertTrue($rule->test($xml->field[0], $emailAddress));
+		}
+		else
+		{
+			$this->assertInstanceOf('UnexpectedValueException', $rule->test($xml->field[0], $emailAddress));
+		}
 	}
 }

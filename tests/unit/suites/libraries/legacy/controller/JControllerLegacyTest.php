@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Controller
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,7 +19,7 @@ require_once __DIR__ . '/stubs/controller.php';
  * @package     Joomla.UnitTest
  * @subpackage  Controller
  *
- * @since       12.3
+ * @since       3.1.4
  */
 class JControllerLegacyTest extends TestCase
 {
@@ -23,7 +27,7 @@ class JControllerLegacyTest extends TestCase
 	 * An instance of the test object.
 	 *
 	 * @var    JControllerLegacy
-	 * @since  11.1
+	 * @since  1.7.0
 	 */
 	protected $class;
 
@@ -328,7 +332,7 @@ class JControllerLegacyTest extends TestCase
 	}
 
 	/**
-	 * @testdox  Tests setRedirect() works when message and message type are set in setMessage() and the message is overriden by setRedirect()
+	 * @testdox  Tests setRedirect() works when message and message type are set in setMessage() and the message is overridden by setRedirect()
 	 *
 	 * @covers   JControllerLegacy::setRedirect
 	 */
@@ -403,7 +407,7 @@ class JControllerLegacyTest extends TestCase
 	}
 
 	/**
-	 * @testdox  Tests that message and message type set in setMessage() are overriden by setRedirect()
+	 * @testdox  Tests that message and message type set in setMessage() are overridden by setRedirect()
 	 *
 	 * @covers   JControllerLegacy::setRedirect
 	 */

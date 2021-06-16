@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Build
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -39,13 +43,22 @@ ini_set('display_errors', 1);
  *
  * As Joomla transitions its core classes from residing in the global PHP namespace to using namespaced PHP classes, it will be a common
  * occurrence for developers to work in an environment where their code is still using the old class names which may not exist in newer
+<<<<<<< HEAD
  * Joomla releases except for in PHP's autoloader as a class alias.  This script therefore allows developers to generate a mapping
+=======
+ * Joomla releases except for in PHP's autoloader as a class alias. This script therefore allows developers to generate a mapping
+>>>>>>> upstream/staging
  * file they can use in their local environment which will create "real" classes for the aliased class names and allow things like
  * IDE auto completion to work normally.
  *
  * When this script is run, a `stubs.php` file will be generated at the root of your Joomla installation holding all of the mapping
+<<<<<<< HEAD
  * information.  Note that this file will raise some IDE errors as it will generate stub classes extending a final class (something
  * not allowed in PHP).  Therefore it is suggested that inspections on this file are disabled.
+=======
+ * information. Note that this file will raise some IDE errors as it will generate stub classes extending a final class (something
+ * not allowed in PHP). Therefore it is suggested that inspections on this file are disabled.
+>>>>>>> upstream/staging
  *
  * @since  3.0
  */
@@ -60,6 +73,7 @@ class StubGenerator extends CliApplication
 	 */
 	public function doExecute()
 	{
+<<<<<<< HEAD
 		// Get the aliased class names via Reflection as the property is protected
 		$refl = new ReflectionClass('JLoader');
 		$property = $refl->getProperty('classAliases');
@@ -77,6 +91,35 @@ class StubGenerator extends CliApplication
 			$modifier = ($reflection->isAbstract() && !$reflection->isInterface()) ? 'abstract ' : '';
 
 			$file .= "$modifier$type $oldName extends $newName {}\n";
+=======
+		$file = "<?php\n";
+
+		// Loop the aliases to generate the stubs data
+		foreach (JLoader::getDeprecatedAliases() as $alias)
+		{
+			$oldName           = $alias['old'];
+			$newName           = $alias['new'];
+			$deprecatedVersion = $alias['version'];
+
+			// Figure out if the alias is for a class or interface
+			$reflection = new ReflectionClass($newName);
+			$type       = $reflection->isInterface() ? 'interface' : 'class';
+			$modifier   = (!$reflection->isInterface() && $reflection->isFinal()) ? 'final ' : '';
+			$modifier   = ($reflection->isAbstract() && !$reflection->isInterface()) ? $modifier . 'abstract ' : $modifier;
+
+			// If a deprecated version is available, write a stub class doc block with a deprecated tag
+			if ($deprecatedVersion !== false)
+			{
+				$file .= <<<PHP
+/**
+ * @deprecated $deprecatedVersion Use $newName instead.
+ */
+
+PHP;
+			}
+
+			$file .= "$modifier$type $oldName extends $newName {}\n\n";
+>>>>>>> upstream/staging
 		}
 
 		// And save the file locally

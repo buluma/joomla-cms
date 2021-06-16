@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Model
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,13 +20,13 @@ JLoader::register('BaseModel', __DIR__ . '/stubs/tbase.php');
  *
  * @package     Joomla.UnitTest
  * @subpackage  Mapper
- * @since       12.1
+ * @since       3.0.0
  */
 class JModelBaseTest extends TestCase
 {
 	/**
 	 * @var    BaseModel
-	 * @since  12.1
+	 * @since  3.0.0
 	 */
 	private $_instance;
 
@@ -31,12 +35,12 @@ class JModelBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__construct()
 	{
 		// @codingStandardsIgnoreStart
-		// @todo check the instanciating new classes without brackets sniff
+		// @todo check the instantiating new classes without brackets sniff
 		$this->assertEquals(new Registry, $this->_instance->getState(), 'Checks default state.');
 		// @codingStandardsIgnoreEnd
 
@@ -50,7 +54,7 @@ class JModelBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetState()
 	{
@@ -65,7 +69,7 @@ class JModelBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSetState()
 	{
@@ -79,7 +83,7 @@ class JModelBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testLoadState()
 	{
@@ -91,7 +95,7 @@ class JModelBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function setUp()
 	{

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Application
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,7 +18,7 @@ include_once __DIR__ . '/stubs/JApplicationDaemonInspector.php';
  *
  * @package     Joomla.UnitTest
  * @subpackage  Application
- * @since       11.1
+ * @since       1.7.0
  */
 class JApplicationDaemonTest extends TestCase
 {
@@ -22,7 +26,7 @@ class JApplicationDaemonTest extends TestCase
 	 * An instance of a JApplicationDaemon inspector.
 	 *
 	 * @var    JApplicationDaemonInspector
-	 * @since  11.3
+	 * @since  1.7.3
 	 */
 	protected $inspector;
 
@@ -31,7 +35,7 @@ class JApplicationDaemonTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function setUp()
 	{
@@ -59,7 +63,11 @@ class JApplicationDaemonTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{
@@ -86,7 +94,11 @@ class JApplicationDaemonTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDownAfterClass()
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 */
 	public static function tearDownAfterClass()
 	{
@@ -106,7 +118,7 @@ class JApplicationDaemonTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSetupSignalHandlers()
 	{
@@ -130,7 +142,7 @@ class JApplicationDaemonTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSetupSignalHandlersFailure()
 	{
@@ -155,7 +167,7 @@ class JApplicationDaemonTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testWriteProcessIdFile()
 	{

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,49 +16,49 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
- * @since       13.1
+ * @since       3.2.0
  */
 class JLinkedinGroupsTest extends TestCase
 {
 	/**
 	 * @var    JRegistry  Options for the Linkedin object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  Mock http object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
 	/**
 	 * @var    JInput The input object to use in retrieving GET/POST data.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $input;
 
 	/**
 	 * @var    JLinkedinGroups  Object under test.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $object;
 
 	/**
 	 * @var    JLinkedinOAuth  Authentication object for the Twitter object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $oauth;
 
 	/**
 	 * @var    string  Sample JSON string.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $sampleString = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 
 	/**
 	 * @var    string  Sample JSON error message.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $errorString = '{"errorCode":401, "message": "Generic error"}';
 
@@ -119,7 +123,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetGroup()
 	{
@@ -159,7 +163,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException DomainException
 	 */
 	public function testGetGroupFailure()
@@ -196,7 +200,7 @@ class JLinkedinGroupsTest extends TestCase
 	*
 	* @return array
 	*
-	* @since 13.1
+	* @since 3.2.0
 	*/
 	public function seedId()
 	{
@@ -215,7 +219,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedId
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetMemberships($person_id)
 	{
@@ -267,7 +271,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @dataProvider seedId
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetMembershipsFailure($person_id)
 	{
@@ -315,7 +319,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedId
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetSettings($person_id)
 	{
@@ -369,7 +373,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @dataProvider seedId
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetSettingsFailure($person_id)
 	{
@@ -416,7 +420,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testChangeSettings()
 	{
@@ -462,7 +466,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testChangeSettingsFailure()
 	{
@@ -504,7 +508,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testJoinGroup()
 	{
@@ -556,7 +560,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testJoinGroupFailure()
 	{
@@ -604,7 +608,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testLeaveGroup()
 	{
@@ -633,7 +637,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testLeaveGroupFailure()
 	{
@@ -658,7 +662,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetDiscussions()
 	{
@@ -705,7 +709,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetDiscussionsFailure()
 	{
@@ -751,7 +755,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedId
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetUserPosts($person_id)
 	{
@@ -807,7 +811,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetUserPostsFailure()
 	{
@@ -853,7 +857,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetPost()
 	{
@@ -890,7 +894,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetPostFailure()
 	{
@@ -923,7 +927,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetPostComments()
 	{
@@ -964,7 +968,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetPostCommentsFailure()
 	{
@@ -1001,7 +1005,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testCreatePost()
 	{
@@ -1037,7 +1041,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testCreatePostFailure()
 	{
@@ -1068,7 +1072,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test_likeUnlike()
 	{
@@ -1081,7 +1085,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testLikePost()
 	{
@@ -1114,7 +1118,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testLikePostFailure()
 	{
@@ -1143,7 +1147,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testUnlikePost()
 	{
@@ -1175,7 +1179,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test_followUnfollow()
 	{
@@ -1188,7 +1192,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testFollowPost()
 	{
@@ -1221,7 +1225,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testFollowPostFailure()
 	{
@@ -1250,7 +1254,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testUnfollowPost()
 	{
@@ -1282,7 +1286,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testFalgPost()
 	{
@@ -1316,7 +1320,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testFalgPostFailure()
 	{
@@ -1346,7 +1350,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeletePost()
 	{
@@ -1375,7 +1379,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeletePostFailure()
 	{
@@ -1400,7 +1404,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetComment()
 	{
@@ -1437,7 +1441,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetCommentFailure()
 	{
@@ -1470,7 +1474,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testAddComment()
 	{
@@ -1505,7 +1509,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testAddCommentFailure()
 	{
@@ -1535,7 +1539,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeleteComment()
 	{
@@ -1564,7 +1568,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeleteCommentFailure()
 	{
@@ -1592,7 +1596,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedId
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetSuggested($person_id)
 	{
@@ -1641,7 +1645,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @dataProvider seedId
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetSuggestedFailure($person_id)
 	{
@@ -1686,7 +1690,7 @@ class JLinkedinGroupsTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedId
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeleteSuggestion($person_id)
 	{
@@ -1728,7 +1732,7 @@ class JLinkedinGroupsTest extends TestCase
 	 *
 	 * @dataProvider seedId
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeleteSuggestionFailure($person_id)
 	{

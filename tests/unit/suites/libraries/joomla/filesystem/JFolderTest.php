@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.UnitTest
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,7 +18,7 @@ JLoader::register('JFolder', JPATH_PLATFORM . '/joomla/filesystem/folder.php');
  *
  * @package     Joomla.UnitTest
  * @subpackage  Event
- * @since       11.1
+ * @since       1.7.0
  */
 class JFolderTest extends TestCase
 {
@@ -24,7 +28,7 @@ class JFolderTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  UnexpectedValueException
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testDeleteArrayPath()
 	{
@@ -48,7 +52,7 @@ class JFolderTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testFiles()
 	{
@@ -137,7 +141,7 @@ class JFolderTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testFolders()
 	{
@@ -268,7 +272,7 @@ class JFolderTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testMakeSafe()
 	{
@@ -281,7 +285,7 @@ class JFolderTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	private function _cleanupTestFiles()
 	{
@@ -300,7 +304,7 @@ class JFolderTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	private function _cleanupFile($path)
 	{

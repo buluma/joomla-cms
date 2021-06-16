@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Utilities
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -17,7 +21,7 @@ require_once JPATH_PLATFORM . '/joomla/utilities/arrayhelper.php';
  *
  * @package     Joomla.UnitTest
  * @subpackage  Utilities
- * @since       11.1
+ * @since       1.7.0
  */
 class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 {
@@ -26,7 +30,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestArrayUniqueData()
 	{
@@ -59,7 +63,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestFromObjectData()
 	{
@@ -243,7 +247,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestGetColumnData()
 	{
@@ -316,7 +320,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestGetValueData()
 	{
@@ -378,7 +382,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function getTestInvertData()
 	{
@@ -431,7 +435,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestPivotData()
 	{
@@ -509,7 +513,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestSortObjectData()
 	{
@@ -1106,7 +1110,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestToIntegerData()
 	{
@@ -1150,7 +1154,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestToObjectData()
 	{
@@ -1235,7 +1239,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function getTestToStringData()
 	{
@@ -1366,7 +1370,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider  getTestArrayUniqueData
 	 * @covers  JArrayHelper::arrayUnique
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testArrayUnique($input, $expected)
 	{
@@ -1389,7 +1393,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider  getTestFromObjectData
 	 * @covers  JArrayHelper::fromObject
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testFromObject($input, $recurse, $regex, $expect, $defaults)
 	{
@@ -1417,7 +1421,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestGetColumnData
 	 * @covers  JArrayHelper::getColumn
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testGetColumn($input, $index, $expect, $message)
 	{
@@ -1429,7 +1433,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @param   array   $input     Input array
 	 * @param   mixed   $index     Element to pull, either by association or number
-	 * @param   mixed   $default   The defualt value, if element not present
+	 * @param   mixed   $default   The default value, if element not present
 	 * @param   string  $type      The type of value returned
 	 * @param   array   $expect    The expected results
 	 * @param   string  $message   The failure message
@@ -1439,7 +1443,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestGetValueData
 	 * @covers  JArrayHelper::getValue
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testGetValue($input, $index, $default, $type, $expect, $message, $defaults)
 	{
@@ -1464,7 +1468,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 * @return  void
 	 *
 	 * @dataProvider  getTestInvertData
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testInvert($input, $expected)
 	{
@@ -1479,7 +1483,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 * @sovers  JArrayHelper::isAssociative
 	 */
 	public function testIsAssociative()
@@ -1526,7 +1530,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestPivotData
 	 * @covers  JArrayHelper::pivot
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testPivot($source, $key, $expected)
 	{
@@ -1553,7 +1557,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestSortObjectData
 	 * @covers  JArrayHelper::sortObjects
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testSortObjects($input, $key, $direction, $casesensitive, $locale, $expect, $message, $defaults, $swappableKeys = array())
 	{
@@ -1611,7 +1615,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestToIntegerData
 	 * @covers  JArrayHelper::toInteger
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testToInteger($input, $default, $expect, $message)
 	{
@@ -1635,7 +1639,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestToObjectData
 	 * @covers  JArrayHelper::toObject
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testToObject($input, $className, $expect, $message)
 	{
@@ -1661,7 +1665,7 @@ class JArrayHelperTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider getTestToStringData
 	 * @covers  JArrayHelper::toString
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function testToString($input, $inner, $outer, $keepKey, $expect, $message, $defaults)
 	{

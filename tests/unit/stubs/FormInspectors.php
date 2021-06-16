@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Form
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -19,7 +23,7 @@ use Joomla\Registry\Registry;
  * @package     Joomla.UnitTest
  * @subpackage  Form
  *
- * @since       11.1
+ * @since       1.7.0
  */
 class JFormInspector extends JForm
 {
@@ -202,7 +206,7 @@ class JFormInspector extends JForm
  * @package     Joomla.UnitTest
  * @subpackage  Form
  *
- * @since       11.1
+ * @since       1.7.0
  */
 class JFormFieldInspector extends JFormField
 {

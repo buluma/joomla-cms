@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.UnitTest
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -11,7 +15,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Google
- * @since       12.3
+ * @since       3.1.4
  */
 class JGoogleEmbedMapsTest extends TestCase
 {
@@ -747,7 +751,7 @@ class JGoogleEmbedMapsTest extends TestCase
  *
  * @return  JHttpResponse
  *
- * @since   12.3
+ * @since   3.1.4
  */
 function mapsGeocodeCallback($url, array $headers = null, $timeout = null)
 {
@@ -789,7 +793,7 @@ function mapsGeocodeCallback($url, array $headers = null, $timeout = null)
  *
  * @return  JHttpResponse
  *
- * @since   12.3
+ * @since   3.1.4
  */
 function mapsGeocode400Callback($url, array $headers = null, $timeout = null)
 {
@@ -811,7 +815,7 @@ function mapsGeocode400Callback($url, array $headers = null, $timeout = null)
  *
  * @return  JHttpResponse
  *
- * @since   12.3
+ * @since   3.1.4
  */
 function mapsGeocodeBadJsonCallback($url, array $headers = null, $timeout = null)
 {

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Hash
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Crypt
- * @since       11.1
+ * @since       1.7.0
  */
 class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 {
@@ -45,7 +49,7 @@ class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function createExceptionData()
 	{
@@ -69,7 +73,7 @@ class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider  createExceptionData
 	 *
-	 * @since    12.3
+	 * @since    3.1.4
 	 */
 	public function testCreateException($password, $type, $salt, $expected, $cost)
 	{
@@ -100,7 +104,7 @@ class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @dataProvider  createData
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCreate($password, $type, $salt, $expected, $cost = 10)
 	{
@@ -160,7 +164,7 @@ class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return array
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function defaultTypeData()
 	{
@@ -181,7 +185,7 @@ class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testSetDefaultType($type, $expectation)
 	{
@@ -203,7 +207,7 @@ class JCryptPasswordSimpleTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetDefaultType($type, $expectation)
 	{

@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Test
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -10,19 +14,31 @@
  * Reflection helper class.
  *
  * @package  Joomla.Test
+<<<<<<< HEAD
  * @since    12.1
+=======
+ * @since    3.0.0
+>>>>>>> upstream/staging
  */
 class TestReflection
 {
 	/**
+<<<<<<< HEAD
 	 * Helper method that gets a protected or private property in a class by relfection.
+=======
+	 * Helper method that gets a protected or private property in a class by reflection.
+>>>>>>> upstream/staging
 	 *
 	 * @param   object  $object        The object from which to return the property value.
 	 * @param   string  $propertyName  The name of the property to return.
 	 *
 	 * @return  mixed  The value of the property.
 	 *
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 * @throws  InvalidArgumentException if property not available.
 	 */
 	public static function getValue($object, $propertyName)
@@ -62,7 +78,11 @@ class TestReflection
 	 *
 	 * @return  mixed
 	 *
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 */
 	public static function invoke($object, $methodName)
 	{
@@ -82,7 +102,11 @@ class TestReflection
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Helper method that sets a protected or private property in a class by relfection.
+=======
+	 * Helper method that sets a protected or private property in a class by reflection.
+>>>>>>> upstream/staging
 	 *
 	 * @param   object  $object        The object for which to set the property.
 	 * @param   string  $propertyName  The name of the property to set.
@@ -90,7 +114,11 @@ class TestReflection
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 */
 	public static function setValue($object, $propertyName, $value)
 	{

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Crypt
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,13 +16,13 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Crypt
- * @since       12.1
+ * @since       3.0.0
  */
 class JCryptCipherRijndael256Test extends TestCase
 {
 	/**
 	 * @var    JCryptCipherRijndael256
-	 * @since  12.1
+	 * @since  3.0.0
 	 */
 	private $_cipher;
 
@@ -27,7 +31,7 @@ class JCryptCipherRijndael256Test extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function setUp()
 	{
@@ -52,7 +56,7 @@ class JCryptCipherRijndael256Test extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function tearDown()
 	{
@@ -94,7 +98,7 @@ class JCryptCipherRijndael256Test extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider data
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testDecrypt($file, $data)
 	{
@@ -114,7 +118,7 @@ class JCryptCipherRijndael256Test extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider data
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testEncrypt($file, $data)
 	{
@@ -132,7 +136,7 @@ class JCryptCipherRijndael256Test extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGenerateKey()
 	{

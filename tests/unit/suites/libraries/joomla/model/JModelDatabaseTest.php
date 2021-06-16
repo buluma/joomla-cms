@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Model
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,13 +18,13 @@ JLoader::register('DatabaseModel', __DIR__ . '/stubs/tdatabase.php');
  *
  * @package     Joomla.UnitTest
  * @subpackage  Mapper
- * @since       12.1
+ * @since       3.0.0
  */
 class JModelDatabaseTest extends TestCase
 {
 	/**
 	 * @var    DatabaseModel
-	 * @since  12.1
+	 * @since  3.0.0
 	 */
 	private $_instance;
 
@@ -45,7 +49,7 @@ class JModelDatabaseTest extends TestCase
 	 */
 	public function testChecksInjectedDatabaseDriver()
 	{
-		// Create a new datbase mock for injection.
+		// Create a new database mock for injection.
 		$db = $this->getMockDatabase();
 		$class = new DatabaseModel(null, $db);
 		$this->assertSame($db, $class->getDb());
@@ -56,7 +60,7 @@ class JModelDatabaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetDb()
 	{
@@ -71,7 +75,7 @@ class JModelDatabaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSetDb()
 	{
@@ -86,7 +90,7 @@ class JModelDatabaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testLoadDb()
 	{
@@ -99,7 +103,7 @@ class JModelDatabaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function setUp()
 	{
@@ -117,7 +121,7 @@ class JModelDatabaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function tearDown()
 	{

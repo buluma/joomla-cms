@@ -18,6 +18,10 @@ $label = JText::_($field->label);
 $value = $field->value;
 $showLabel = $field->params->get('showlabel');
 $labelClass = $field->params->get('label_render_class');
+<<<<<<< HEAD
+=======
+$renderClass = $field->params->get('render_class');
+>>>>>>> upstream/staging
 
 if ($value == '')
 {
@@ -28,4 +32,8 @@ if ($value == '')
 <?php if ($showLabel == 1) : ?>
 	<span class="field-label <?php echo $labelClass; ?>"><?php echo htmlentities($label, ENT_QUOTES | ENT_IGNORE, 'UTF-8'); ?>: </span>
 <?php endif; ?>
+<<<<<<< HEAD
 <span class="field-value"><?php echo $value; ?></span>
+=======
+<span class="field-value <?php echo $renderClass; ?>"><?php echo $value; ?></span>
+>>>>>>> upstream/staging

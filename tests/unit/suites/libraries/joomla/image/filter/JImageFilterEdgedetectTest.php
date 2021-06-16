@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Image
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Image
- * @since       11.4
+ * @since       2.5.0
  */
 class JImageFilterEdgedetectTest extends TestCase
 {
@@ -21,7 +25,7 @@ class JImageFilterEdgedetectTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	protected function setUp()
 	{
@@ -41,7 +45,7 @@ class JImageFilterEdgedetectTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testExecute()
 	{

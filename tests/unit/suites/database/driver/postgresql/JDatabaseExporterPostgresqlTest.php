@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Database
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -88,7 +92,8 @@ class JDatabaseExporterPostgresqlTest extends TestCase
 					'isUnique' => 'TRUE',
 					'Query' => 'ALTER TABLE "jos_dbtest" ADD PRIMARY KEY (id)',
 				)
-			));
+				)
+			);
 
 		// Check if database is at least 9.1.0
 		$this->dbo->expects($this->any())
@@ -102,7 +107,8 @@ class JDatabaseExporterPostgresqlTest extends TestCase
 		}
 		else
 		{
-			/* Older version */
+			// Older version
+
 			$this->_ver9dot1 = false;
 			$start_val = null;
 		}
@@ -193,7 +199,8 @@ class JDatabaseExporterPostgresqlTest extends TestCase
 			->from('jos_test')
 			->withStructure(true);
 
-		/* Depending on which version is running, 9.1.0 or older */
+		// Depending on which version is running, 9.1.0 or older
+
 		$start_val = null;
 
 		if ($this->_ver9dot1)
@@ -258,7 +265,8 @@ class JDatabaseExporterPostgresqlTest extends TestCase
 			->from('jos_test')
 			->withStructure(true);
 
-		/* Depending on which version is running, 9.1.0 or older */
+		// Depending on which version is running, 9.1.0 or older
+
 		$start_val = null;
 
 		if ($this->_ver9dot1)
@@ -301,7 +309,8 @@ class JDatabaseExporterPostgresqlTest extends TestCase
 			->from('jos_test')
 			->withStructure(true);
 
-		/* Depending on which version is running, 9.1.0 or older */
+		// Depending on which version is running, 9.1.0 or older
+
 		$start_val = null;
 
 		if ($this->_ver9dot1)

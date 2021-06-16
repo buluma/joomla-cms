@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Environment
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -64,6 +68,16 @@ class JBrowserTest extends \PHPUnit\Framework\TestCase
 	public function dataMatch()
 	{
 		return array(
+<<<<<<< HEAD
+=======
+			'Edge 75' => array(
+				'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3738.0 Safari/537.36 Edg/75.0.107.0',
+				'edg',
+				'win',
+				'75',
+				false,
+			),
+>>>>>>> upstream/staging
 			'Edge 14' => array(
 				'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393',
 				'edge',

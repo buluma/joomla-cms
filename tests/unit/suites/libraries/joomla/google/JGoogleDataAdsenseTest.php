@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.UnitTest
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -11,7 +15,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Google
- * @since       12.3
+ * @since       3.1.4
  */
 class JGoogleDataAdsenseTest extends TestCase
 {
@@ -401,7 +405,7 @@ class JGoogleDataAdsenseTest extends TestCase
  *
  * @return  JHttpResponse
  *
- * @since   12.3
+ * @since   3.1.4
  */
 function jsonAdsenseCallback($url, array $headers = null, $timeout = null)
 {
@@ -423,7 +427,7 @@ function jsonAdsenseCallback($url, array $headers = null, $timeout = null)
  *
  * @return  JHttpResponse
  *
- * @since   12.3
+ * @since   3.1.4
  */
 function jsonAdsenseReportCallback($url, array $headers = null, $timeout = null)
 {
@@ -445,7 +449,7 @@ function jsonAdsenseReportCallback($url, array $headers = null, $timeout = null)
  *
  * @return  JHttpResponse
  *
- * @since   12.3
+ * @since   3.1.4
  */
 function adsenseExceptionCallback($url, array $headers = null, $timeout = null)
 {

@@ -3,9 +3,15 @@
  * @package     Joomla.UnitTest
  * @subpackage  Log
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+
+use Joomla\Utilities\IpHelper;
 
 require_once __DIR__ . '/stubs/w3c/inspector.php';
 
@@ -14,7 +20,7 @@ require_once __DIR__ . '/stubs/w3c/inspector.php';
  *
  * @package     Joomla.UnitTest
  * @subpackage  Log
- * @since       11.1
+ * @since       1.7.0
  */
 class JLogLoggerW3CTest extends \PHPUnit\Framework\TestCase
 {
@@ -30,6 +36,7 @@ class JLogLoggerW3CTest extends \PHPUnit\Framework\TestCase
 			'text_file_path' => JPATH_TESTS . '/tmp',
 		);
 		$logger = new JLogLoggerW3CInspector($config);
+		$ip     = IpHelper::getIp();
 
 		// Remove the log file if it exists.
 		@ unlink($logger->path);
@@ -41,7 +48,7 @@ class JLogLoggerW3CTest extends \PHPUnit\Framework\TestCase
 			'Line: ' . __LINE__
 		);
 
-		$_SERVER['REMOTE_ADDR'] = '192.168.0.1';
+		IpHelper::setIp('192.168.0.1');
 
 		$logger->addEntry(new JLogEntry('Testing 02', JLog::ERROR, null, '1982-12-15'));
 		$this->assertEquals(
@@ -50,7 +57,7 @@ class JLogLoggerW3CTest extends \PHPUnit\Framework\TestCase
 			'Line: ' . __LINE__
 		);
 
-		$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+		IpHelper::setIp('127.0.0.1');
 
 		$logger->addEntry(new JLogEntry('Testing3', JLog::EMERGENCY, 'deprecated', '1980-04-18'));
 		$this->assertEquals(
@@ -58,6 +65,9 @@ class JLogLoggerW3CTest extends \PHPUnit\Framework\TestCase
 			'1980-04-18	00:00:00	EMERGENCY	127.0.0.1	deprecated	Testing3',
 			'Line: ' . __LINE__
 		);
+
+		// Reset IP
+		IpHelper::setIp($ip);
 
 		// Remove the log file if it exists.
 		@ unlink($logger->path);
@@ -70,7 +80,7 @@ class JLogLoggerW3CTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  string
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	protected function getLastLine($path)
 	{

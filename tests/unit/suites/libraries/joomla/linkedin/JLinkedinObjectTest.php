@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,37 +19,37 @@ require_once __DIR__ . '/stubs/JLinkedinObjectMock.php';
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
  *
- * @since       13.1
+ * @since       3.2.0
  */
 class JLinkedinObjectTest extends TestCase
 {
 	/**
 	 * @var    JRegistry  Options for the Linkedin object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  Mock client object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
 	/**
 	 * @var    JLinkedinObjectMock  Object under test.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $object;
 
 	/**
 	 * @var    string  Sample JSON string.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $sampleString = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 
 	/**
 	 * @var    string  Sample JSON error message.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $errorString = '{"errors":[{"message":"Sorry, that page does not exist","code":34}]}';
 
@@ -83,7 +87,7 @@ class JLinkedinObjectTest extends TestCase
 	 *
 	 * @return void
 	 *
-	 * @since 13.1
+	 * @since 3.2.0
 	 */
 	public function testSetOption()
 	{

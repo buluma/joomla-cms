@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Database
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,13 +16,13 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Database
- * @since       11.3
+ * @since       1.7.3
  */
 class JDatabaseQueryPostgresqlTest extends TestCase
 {
 	/**
 	 * @var    JDatabaseDriver  A mock of the JDatabaseDriver object for testing purposes.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $dbo;
 
@@ -26,7 +30,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 * The instance of the object to test.
 	 *
 	 * @var    JDatabaseQueryPostgresql
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_instance;
 
@@ -35,7 +39,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function dataTestNullDate()
 	{
@@ -51,7 +55,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function dataTestQuote()
 	{
@@ -66,7 +70,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function dataTestJoin()
 	{
@@ -90,7 +94,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  string
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function mockQuoteName($text)
 	{
@@ -104,7 +108,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  JDatabaseQueryPostgresql
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function mockGetQuery($new = false)
 	{
@@ -153,7 +157,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function test__toStringSelect()
 	{
@@ -164,7 +168,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 			->innerJoin('b ON b.id = a.id')
 			->where('b.id = 1')
 			->group('a.id')
-				->having('COUNT(a.id) > 3')
+			->having('COUNT(a.id) > 3')
 			->order('a.id');
 
 		$this->assertEquals(
@@ -285,7 +289,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function test__toStringUpdate()
 	{
@@ -334,7 +338,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toStringYear()
 	{
@@ -353,7 +357,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toStringMonth()
 	{
@@ -372,7 +376,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toStringDay()
 	{
@@ -391,7 +395,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toStringHour()
 	{
@@ -410,7 +414,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toStringMinute()
 	{
@@ -429,7 +433,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toStringSecond()
 	{
@@ -448,7 +452,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function test__toStringInsert_subquery()
 	{
@@ -477,7 +481,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCastAsChar()
 	{
@@ -495,7 +499,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCharLength()
 	{
@@ -512,7 +516,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testChaining()
 	{
@@ -526,7 +530,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testClear_all()
 	{
@@ -578,7 +582,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testClear_clause()
 	{
@@ -637,7 +641,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testClear_type()
 	{
@@ -692,7 +696,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 				$q->$type
 			);
 
-			// Now check the claues have not been affected.
+			// Now check the clauses have not been affected.
 			foreach ($clauses as $clause)
 			{
 				$this->assertEquals(
@@ -722,7 +726,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testFrom()
 	{
@@ -743,7 +747,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testGroup()
 	{
@@ -764,7 +768,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testHaving()
 	{
@@ -792,7 +796,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testInnerJoin()
 	{
@@ -818,7 +822,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 * @dataProvider  dataTestJoin
 	 */
 	public function testJoin($type, $conditions)
@@ -837,7 +841,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLeftJoin()
 	{
@@ -863,7 +867,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 * @dataProvider  dataTestNullDate
 	 */
 	public function testNullDate($quoted, $expected)
@@ -881,7 +885,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testOrder()
 	{
@@ -902,7 +906,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testOuterJoin()
 	{
@@ -929,7 +933,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 * @dataProvider  dataTestQuote
 	 */
 	public function testQuote($text, $escape, $expected)
@@ -947,7 +951,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testQuoteName()
 	{
@@ -964,7 +968,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRightJoin()
 	{
@@ -987,7 +991,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSelect()
 	{
@@ -1012,7 +1016,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testWhere()
 	{
@@ -1039,7 +1043,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testEscape()
 	{
@@ -1056,7 +1060,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testForUpdate()
 	{
@@ -1084,7 +1088,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testForShare()
 	{
@@ -1111,7 +1115,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testNoWait()
 	{
@@ -1127,7 +1131,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLimit()
 	{
@@ -1143,7 +1147,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testOffset()
 	{
@@ -1159,7 +1163,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testReturning()
 	{
@@ -1175,15 +1179,21 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function seedDateAdd()
 	{
 		return array(
 			// Elements: date, interval, datepart, expected
+<<<<<<< HEAD
 			'Add date'		=> array('2008-12-31', '1', 'day', "timestamp '2008-12-31' + interval '1 day'"),
 			'Subtract date'	=> array('2008-12-31', '-1', 'day', "timestamp '2008-12-31' - interval '1 day'"),
 			'Add datetime'	=> array('2008-12-31 23:59:59', '1', 'day', "timestamp '2008-12-31 23:59:59' + interval '1 day'"),
+=======
+			'Add date'	=> array("'2008-12-31'", "1", "day", "timestamp '2008-12-31' + interval '1 day'"),
+			'Subtract date'	=> array("'2008-12-31'", "-1", "day", "timestamp '2008-12-31' - interval '1 day'"),
+			'Add datetime'	=> array("'2008-12-31 23:59:59'", "1", "day", "timestamp '2008-12-31 23:59:59' + interval '1 day'"),
+>>>>>>> upstream/staging
 		);
 	}
 
@@ -1198,7 +1208,7 @@ class JDatabaseQueryPostgresqlTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider  seedDateAdd
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDateAdd($date, $interval, $datePart, $expected)
 	{

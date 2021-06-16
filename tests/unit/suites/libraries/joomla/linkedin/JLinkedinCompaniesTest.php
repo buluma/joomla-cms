@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,49 +16,49 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
- * @since       13.1
+ * @since       3.2.0
  */
 class JLinkedinCompaniesTest extends TestCase
 {
 	/**
 	 * @var    JRegistry  Options for the Linkedin object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  Mock http object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
 	/**
 	 * @var    JInput The input object to use in retrieving GET/POST data.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $input;
 
 	/**
 	 * @var    JLinkedinCompanies  Object under test.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $object;
 
 	/**
 	 * @var    JLinkedinOAuth  Authentication object for the Twitter object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $oauth;
 
 	/**
 	 * @var    string  Sample JSON string.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $sampleString = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 
 	/**
 	 * @var    string  Sample JSON error message.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $errorString = '{"errorCode":401, "message": "Generic error"}';
 
@@ -119,7 +123,7 @@ class JLinkedinCompaniesTest extends TestCase
 	*
 	* @return array
 	*
-	* @since 13.1
+	* @since 3.2.0
 	*/
 	public function seedGetCompanies()
 	{
@@ -143,7 +147,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedGetCompanies
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetCompanies($id, $name, $domain)
 	{
@@ -203,7 +207,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetCompaniesFailure()
 	{
@@ -237,7 +241,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetUpdates()
 	{
@@ -277,7 +281,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetUpdatesFailure()
 	{
@@ -313,7 +317,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testSearch()
 	{
@@ -370,7 +374,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testSearchFailure()
 	{
@@ -421,7 +425,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetFollowed()
 	{
@@ -455,7 +459,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetFollowedFailure()
 	{
@@ -485,7 +489,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testFollow()
 	{
@@ -518,7 +522,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testFollowFailure()
 	{
@@ -547,7 +551,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testUnfollow()
 	{
@@ -576,7 +580,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testUnfollowFailure()
 	{
@@ -601,7 +605,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetSuggested()
 	{
@@ -639,7 +643,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetSuggestedFailure()
 	{
@@ -673,7 +677,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetProducts()
 	{
@@ -712,7 +716,7 @@ class JLinkedinCompaniesTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException DomainException
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetProductsFailure()
 	{

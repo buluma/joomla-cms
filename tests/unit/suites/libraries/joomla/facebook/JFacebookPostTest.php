@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Facebook
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,43 +18,43 @@ use Joomla\Registry\Registry;
  *
  * @package     Joomla.UnitTest
  * @subpackage  Facebook
- * @since       13.1
+ * @since       3.2.0
  */
 class JFacebookPostTest extends TestCase
 {
 	/**
 	 * @var    Registry  Options for the Facebook object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  Mock client object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
 	/**
 	 * @var    JFacebookPost  Object under test.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $object;
 
 	/**
 	 * @var    JFacebookOauth  Facebook OAuth 2 client
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $oauth;
 
 	/**
 	 * @var    string  Sample JSON string.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $sampleString = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 
 	/**
 	 * @var    string  Sample JSON error message.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $errorString = '{"error": {"message": "Generic Error."}}';
 
@@ -67,7 +71,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	protected function setUp()
 	{
@@ -121,7 +125,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetPost()
 	{
@@ -148,7 +152,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testGetPostFailure()
@@ -173,7 +177,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeletePost()
 	{
@@ -200,7 +204,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testDeletePostFailure()
@@ -225,7 +229,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetComments()
 	{
@@ -252,7 +256,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testGetCommentsFailure()
@@ -277,7 +281,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testCreateComment()
 	{
@@ -309,7 +313,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testCreateCommentFailure()
@@ -339,7 +343,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeleteComment()
 	{
@@ -366,7 +370,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testDeleteCommentFailure()
@@ -391,7 +395,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetLikes()
 	{
@@ -418,7 +422,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testGetLikesFailure()
@@ -443,7 +447,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testCreateLike()
 	{
@@ -470,7 +474,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testCreateLikeFailure()
@@ -495,7 +499,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testDeleteLike()
 	{
@@ -522,7 +526,7 @@ class JFacebookPostTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  RuntimeException
 	 */
 	public function testDeleteLikeFailure()

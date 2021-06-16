@@ -2,8 +2,14 @@
 /**
  * Part of the Joomla Framework Utilities Package
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE
+=======
+ * @copyright   Copyright (C) 2010-2016 Nicholas K. Dionysopoulos / Akeeba Ltd. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @note        This file has been modified by the Joomla! Project and no longer reflects the original work of its author.
+>>>>>>> upstream/staging
  */
 
 namespace Joomla\Utilities;
@@ -11,9 +17,12 @@ namespace Joomla\Utilities;
 /**
  * IpHelper is a utility class for processing IP addresses
  *
+<<<<<<< HEAD
  * This class is adapted from the `FOFUtilsIp` class distributed with the Joomla! CMS as part of the FOF library by Akeeba Ltd.
  * The original class is copyright of Nicholas K. Dionysopoulos / Akeeba Ltd.
  *
+=======
+>>>>>>> upstream/staging
  * @since  1.6.0
  */
 final class IpHelper
@@ -31,6 +40,10 @@ final class IpHelper
 	 *
 	 * @var    boolean
 	 * @since  1.6.0
+<<<<<<< HEAD
+=======
+	 * @note   The default value is false in version 2.0+
+>>>>>>> upstream/staging
 	 */
 	private static $allowIpOverrides = true;
 
@@ -97,7 +110,11 @@ final class IpHelper
 	 */
 	public static function isIPv6($ip)
 	{
+<<<<<<< HEAD
 		return strstr($ip, ':');
+=======
+		return strpos($ip, ':') !== false;
+>>>>>>> upstream/staging
 	}
 
 	/**
@@ -448,7 +465,11 @@ final class IpHelper
 
 			while (empty($ip) && !empty($ips))
 			{
+<<<<<<< HEAD
 				$ip = array_pop($ips);
+=======
+				$ip = array_shift($ips);
+>>>>>>> upstream/staging
 				$ip = trim($ip);
 			}
 		}

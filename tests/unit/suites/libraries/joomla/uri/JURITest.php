@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Uri
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Uri
- * @since       11.1
+ * @since       1.7.0
  */
 class JUriTest extends \PHPUnit\Framework\TestCase
 {
@@ -35,7 +39,11 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.1
+=======
+	 * @since   1.7.0
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{
@@ -73,7 +81,11 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.1
+=======
+	 * @since   1.7.0
+>>>>>>> upstream/staging
 	 * @covers  JUri::getInstance
 	 */
 	public function testGetInstance()
@@ -93,7 +105,11 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.1
+=======
+	 * @since   1.7.0
+>>>>>>> upstream/staging
 	 * @covers  JUri::root
 	 */
 	public function testRoot()
@@ -109,7 +125,11 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.1
+=======
+	 * @since   1.7.0
+>>>>>>> upstream/staging
 	 * @covers  JUri::current
 	 */
 	public function testCurrent()
@@ -125,7 +145,11 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.1
+=======
+	 * @since   1.7.0
+>>>>>>> upstream/staging
 	 * @covers  JUri::parse
 	 */
 	public function testParse()
@@ -138,7 +162,7 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 * @covers  JUri::buildQuery
 	 */
 	public function testBuildQuery()
@@ -162,7 +186,7 @@ class JUriTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 * @covers  JUri::setPath
 	 */
 	public function testSetPath()

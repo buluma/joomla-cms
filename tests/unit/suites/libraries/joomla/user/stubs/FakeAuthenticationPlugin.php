@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  User
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,13 +16,13 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  User
- * @since       11.1
+ * @since       1.7.0
  */
 class PlgAuthenticationFake
 {
 	/**
 	 * @var    string
-	 * @since  11.1
+	 * @since  1.7.0
 	 */
 	public $name = 'fake';
 
@@ -31,7 +35,7 @@ class PlgAuthenticationFake
 	 *
 	 * @return  void
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function onUserAuthenticate($credentials, $options, &$response)
 	{

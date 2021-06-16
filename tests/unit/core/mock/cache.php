@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Test
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -10,7 +14,7 @@
  * Class to mock JCache.
  *
  * @package  Joomla.Test
- * @since    12.1
+ * @since    3.0.0
  */
 class TestMockCache
 {
@@ -18,7 +22,7 @@ class TestMockCache
 	 * Public cache to inject faux data.
 	 *
 	 * @var    array
-	 * @since  12.1
+	 * @since  3.0.0
 	 */
 	public static $cache = array();
 
@@ -30,7 +34,7 @@ class TestMockCache
 	 *
 	 * @return  object
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public static function create(TestCase $test, $data = array())
 	{
@@ -68,7 +72,7 @@ class TestMockCache
 	 *
 	 * @return  mixed  The value of the key or null if it does not exist.
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public static function mockGet($id)
 	{
@@ -83,7 +87,7 @@ class TestMockCache
 	 *
 	 * @return  mixed  The value of the key or null if it does not exist.
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public static function mockStore($value, $id)
 	{

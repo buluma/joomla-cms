@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Application
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package  Joomla.UnitTest
  *
- * @since    11.3
+ * @since    1.7.3
  */
 class JWebClientInspector extends JApplicationWebClient
 {
@@ -21,7 +25,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function detectRequestUri()
 	{
@@ -35,7 +39,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function detectBrowser($userAgent)
 	{
@@ -49,7 +53,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  string
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function detectEngine($userAgent)
 	{
@@ -63,7 +67,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  string
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function detectPlatform($userAgent)
 	{
@@ -77,7 +81,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  string
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function detectEncoding($acceptEncoding)
 	{
@@ -91,7 +95,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  string
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function detectLanguage($acceptLanguage)
 	{
@@ -105,7 +109,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function detectRobot($userAgent)
 	{
@@ -119,7 +123,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  mixed  The value of the class variable.
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function getProperty($name)
 	{
@@ -140,7 +144,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function loadClientInformation($userAgent = null)
 	{
@@ -152,7 +156,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function fetchConfigurationData()
 	{
@@ -164,7 +168,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function loadSystemURIs()
 	{
@@ -178,7 +182,7 @@ class JWebClientInspector extends JApplicationWebClient
 	 *
 	 * @return  string
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testHelperClient($ua)
 	{

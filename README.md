@@ -1,17 +1,31 @@
+<<<<<<< HEAD
 Joomla! CMS™  [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+=======
+Joomla! CMS™ [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cms/readme)](https://github.com/igrigorik/ga-beacon) 
+>>>>>>> upstream/staging
 ====================
 
 Build Status
 ---------------------
+<<<<<<< HEAD
 Travis-CI: [![Build Status](https://travis-ci.org/buluma/joomla-cms.svg?branch=staging)](https://travis-ci.org/buluma/joomla-cms)
 
 AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/bpcxulw6nnxlv8kb/branch/staging?svg=true)](https://ci.appveyor.com/project/joomla/joomla-cms)
+=======
+| Drone-CI | AppVeyor |
+| ------------- | ------------- |
+|  [![Build Status](https://ci.joomla.org/api/badges/joomla/joomla-cms/status.svg)](https://ci.joomla.org/joomla/joomla-cms)  | [![Build status](https://ci.appveyor.com/api/projects/status/ru6sxal8jmfckvjc/branch/staging?svg=true)](https://ci.appveyor.com/project/release-joomla/joomla-cms)  |
+>>>>>>> upstream/staging
 
 What is this?
 ---------------------
 * This is a Joomla! 3.x installation/upgrade package.
 * Joomla's [Official website](https://www.joomla.org).
+<<<<<<< HEAD
 * Joomla! 3.8 [version history](https://docs.joomla.org/Special:MyLanguage/Joomla_3.8_version_history).
+=======
+* Joomla! 3.9 [version history](https://docs.joomla.org/Special:MyLanguage/Joomla_3.9_version_history).
+>>>>>>> upstream/staging
 * Detailed changes are in the [changelog](https://github.com/joomla/joomla-cms/commits/staging).
 
 What is Joomla?
@@ -24,7 +38,11 @@ Is Joomla! for you?
 ---------------------
 * Joomla! is [the right solution for most content web projects](https://docs.joomla.org/Special:MyLanguage/Portal:Learn_More).
 * View Joomla's [core features here](https://www.joomla.org/core-features.html).
+<<<<<<< HEAD
 * Try it out for yourself in our [online demo](https://demo.joomla.org).
+=======
+* Try it out for yourself on our [free hosting service](https://launch.joomla.org).
+>>>>>>> upstream/staging
 
 How to find a Joomla! translation?
 ---------------------
@@ -62,12 +80,21 @@ Updates are free!
 
 Where can you get support and help?
 ---------------------
+<<<<<<< HEAD
 * [The Joomla! Documentation](https://docs.joomla.org/Special:MyLanguage/Main_Page);
 * [Frequently Asked Questions](https://docs.joomla.org/Special:MyLanguage/Category:FAQ) (FAQ);
 * Find the [information you need](https://docs.joomla.org/Special:MyLanguage/Start_here);
 * Find [help and other users](https://www.joomla.org/about-joomla/create-and-share.html);
 * Post questions at [our forums](https://forum.joomla.org);
 * [Joomla Resources Directory](https://resources.joomla.org) (JRD).
+=======
+* [The Joomla! Documentation](https://docs.joomla.org/Special:MyLanguage/Main_Page).
+* [Frequently Asked Questions](https://docs.joomla.org/Special:MyLanguage/Category:FAQ) (FAQ).
+* Find the [information you need](https://docs.joomla.org/Special:MyLanguage/Start_here).
+* Find [help and other users](https://www.joomla.org/about-joomla/create-and-share.html).
+* Post questions at [our forums](https://forum.joomla.org).
+* [Joomla Resources Directory](https://community.joomla.org/service-providers-directory/) (JRD).
+>>>>>>> upstream/staging
 
 Do you already have a Joomla! site that isn't built with Joomla! 3.x?
 ---------------------
@@ -86,7 +113,11 @@ Do you want to improve Joomla?
 
 Copyright
 ---------------------
+<<<<<<< HEAD
 * Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
 * [Special Thanks](https://docs.joomla.org/Special:MyLanguage/Joomla!_Credits_and_Thanks)
+=======
+* Copyright (C) 2005 - 2021 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
 * Distributed under the GNU General Public License version 2 or later
 * See [License details](https://docs.joomla.org/Special:MyLanguage/Joomla_Licenses)

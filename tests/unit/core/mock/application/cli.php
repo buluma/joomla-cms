@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Test
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -10,7 +14,7 @@
  * Class to mock JApplicationCli.
  *
  * @package  Joomla.Test
- * @since    12.2
+ * @since    3.0.1
  */
 class TestMockApplicationCli extends TestMockApplicationBase
 {
@@ -44,7 +48,7 @@ class TestMockApplicationCli extends TestMockApplicationBase
 	 *
 	 * @return  PHPUnit_Framework_MockObject_MockObject
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public static function create($test, $options = array())
 	{

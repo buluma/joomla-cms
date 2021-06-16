@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  OAuth
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,16 +17,16 @@
  * @package     Joomla.UnitTest
  * @subpackage  OAuth
  *
- * @since       13.1
+ * @since       3.2.0
  */
 class JOAuth1ClientInspector extends JOAuth1Client
 {
 	/**
-	 * Mimic verifing credentials.
+	 * Mimic verifying credentials.
 	 *
 	 * @return void
 	 *
-	 * @since 13.1
+	 * @since 3.2.0
 	 */
 	public function verifyCredentials()
 	{
@@ -42,7 +46,7 @@ class JOAuth1ClientInspector extends JOAuth1Client
 	 *
 	 * @return  void
 	 *
-	 * @since  13.1
+	 * @since  3.2.0
 	 * @throws DomainException
 	 */
 	public function validateResponse($url, $response)

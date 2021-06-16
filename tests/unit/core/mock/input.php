@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Test
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -29,7 +33,7 @@ class TestMockInput
 	private static $test;
 
 	/**
-	 * Class contructor.
+	 * Class constructor.
 	 *
 	 * @param   PHPUnit_Framework_TestCase  $test  A test class.
 	 *

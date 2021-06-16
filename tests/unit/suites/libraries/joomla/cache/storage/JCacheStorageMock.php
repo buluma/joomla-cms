@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Cache
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Cache
- * @since       11.1
+ * @since       1.7.0
  */
 class JCacheStorageMock extends JCacheStorage
 {
@@ -40,7 +44,7 @@ class JCacheStorageMock extends JCacheStorage
 	 *
 	 * @return  mixed  Boolean  false on failure or a cached data object
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function get($id, $group, $checkTime = true)
 	{
@@ -63,7 +67,7 @@ class JCacheStorageMock extends JCacheStorage
 	 *
 	 * @return  boolean  True on success, false otherwise
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function store($id, $group, $data)
 	{
@@ -80,7 +84,7 @@ class JCacheStorageMock extends JCacheStorage
 	 *
 	 * @return  boolean  True on success, false otherwise
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function remove($id, $group)
 	{
@@ -98,7 +102,7 @@ class JCacheStorageMock extends JCacheStorage
 	 *
 	 * @return  boolean  True on success, false otherwise
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	public function clean($group, $mode = null)
 	{
@@ -113,7 +117,7 @@ class JCacheStorageMock extends JCacheStorage
 	 *
 	 * @return  string   The cache_id string
 	 *
-	 * @since   11.1
+	 * @since   1.7.0
 	 */
 	protected function _getCacheId($id, $group)
 	{

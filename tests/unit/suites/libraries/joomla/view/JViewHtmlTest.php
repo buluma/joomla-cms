@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  View
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,13 +19,13 @@ JLoader::register('JModelMock', __DIR__ . '/mocks/JModelMock.php');
  *
  * @package     Joomla.UnitTest
  * @subpackage  View
- * @since       12.1
+ * @since       3.0.0
  */
 class JViewHtmlTest extends TestCase
 {
 	/**
 	 * @var    JViewHtml
-	 * @since  12.1
+	 * @since  3.0.0
 	 */
 	private $_instance;
 
@@ -31,7 +35,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::__construct
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__construct()
 	{
@@ -51,7 +55,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::__toString
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__toString()
 	{
@@ -69,7 +73,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::escape
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testEscape()
 	{
@@ -82,7 +86,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::getLayout
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetLayout()
 	{
@@ -97,7 +101,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::getPath
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetPath()
 	{
@@ -125,7 +129,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::getPaths
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetPaths()
 	{
@@ -142,7 +146,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::render
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testRender()
 	{
@@ -161,7 +165,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::render
-	 * @since   12.1
+	 * @since   3.0.0
 	 *
 	 * @expectedException  RuntimeException
 	 */
@@ -176,7 +180,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::setLayout
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSetLayout()
 	{
@@ -191,7 +195,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::setPaths
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSetPaths()
 	{
@@ -209,7 +213,7 @@ class JViewHtmlTest extends TestCase
 	 * @return  void
 	 *
 	 * @covers  JViewHtml::loadPaths
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testLoadPaths()
 	{
@@ -221,7 +225,7 @@ class JViewHtmlTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function setUp()
 	{

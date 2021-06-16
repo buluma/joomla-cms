@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Database
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +16,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Table
- * @since       12.3
+ * @since       3.1.4
  */
 class JTableContentTest extends TestCaseDatabase
 {
@@ -20,7 +24,7 @@ class JTableContentTest extends TestCaseDatabase
 	 * Object under test
 	 *
 	 * @var    JTableContent
-	 * @since  11.4
+	 * @since  2.5.0
 	 */
 	protected $object;
 
@@ -30,7 +34,7 @@ class JTableContentTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	protected function setUp()
 	{
@@ -50,7 +54,7 @@ class JTableContentTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	protected function tearDown()
 	{
@@ -64,7 +68,7 @@ class JTableContentTest extends TestCaseDatabase
 	 *
 	 * @return  PHPUnit_Extensions_Database_DataSet_CsvDataSet
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	protected function getDataSet()
 	{
@@ -83,7 +87,7 @@ class JTableContentTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testCheck()
 	{
@@ -137,7 +141,7 @@ class JTableContentTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testStore()
 	{
@@ -171,7 +175,7 @@ class JTableContentTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testPublish()
 	{

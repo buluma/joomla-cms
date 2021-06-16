@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Table
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,7 +17,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Table
- * @since       11.1
+ * @since       1.7.0
  */
 class JTableLanguageTest extends TestCaseDatabase
 {
@@ -58,7 +62,7 @@ class JTableLanguageTest extends TestCaseDatabase
 	 *
 	 * @return  PHPUnit_Extensions_Database_DataSet_CsvDataSet
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function getDataSet()
 	{
@@ -74,7 +78,7 @@ class JTableLanguageTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testCheck()
 	{
@@ -99,7 +103,7 @@ class JTableLanguageTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testStore()
 	{

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Feed
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,19 +20,19 @@ JLoader::register('JFeedParserMockNamespace', __DIR__ . '/stubs/JFeedParserMockN
  *
  * @package     Joomla.UnitTest
  * @subpackage  Feed
- * @since       12.3
+ * @since       3.1.4
  */
 class JFeedParserTest extends TestCase
 {
 	/**
 	 * @var    JFeedParser
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_instance;
 
 	/**
 	 * @var    XMLReader
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_reader;
 
@@ -37,7 +41,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testParse()
 	{
@@ -72,7 +76,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRegisterNamespace()
 	{
@@ -104,7 +108,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testProcessElementWithElement()
 	{
@@ -139,7 +143,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testProcessElementWithEntry()
 	{
@@ -178,7 +182,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testFetchNamespace()
 	{
@@ -202,7 +206,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMoveToNextElement()
 	{
@@ -238,7 +242,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMoveToNextElementByName()
 	{
@@ -261,7 +265,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMoveToClosingElement()
 	{
@@ -283,7 +287,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMoveToClosingElementWithInternalElements()
 	{
@@ -330,7 +334,7 @@ class JFeedParserTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMoveToClosingElementWithSelfClosingTag()
 	{
@@ -373,7 +377,11 @@ class JFeedParserTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::setUp()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{
@@ -392,7 +400,11 @@ class JFeedParserTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{

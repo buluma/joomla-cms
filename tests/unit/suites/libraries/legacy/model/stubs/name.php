@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Model
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,7 +17,7 @@
  * @package     Joomla.UnitTest
  * @subpackage  Model
  *
- * @since       12.3
+ * @since       3.1.4
  */
 class NokeywordInName extends JModelLegacy
 {
@@ -22,7 +26,7 @@ class NokeywordInName extends JModelLegacy
 	 * thrown when 'Model' is not in the class name so we can
 	 * test the getName() function fully
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function __construct()
 	{

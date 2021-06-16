@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Test
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -10,7 +14,7 @@
  * Class to mock JSession.
  *
  * @package  Joomla.Test
- * @since    12.1
+ * @since    3.0.0
  */
 class TestMockSession
 {
@@ -18,7 +22,7 @@ class TestMockSession
 	 * An array of options.
 	 *
 	 * @var    array
-	 * @since  11.3
+	 * @since  1.7.3
 	 */
 	protected static $options = array();
 
@@ -30,7 +34,7 @@ class TestMockSession
 	 *
 	 * @return  mixed  The value of the option, or the default if not found.
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public static function getOption($name, $default = null)
 	{
@@ -49,7 +53,7 @@ class TestMockSession
 	 *
 	 * @return  PHPUnit_Framework_MockObject_MockObject
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public static function create($test, $options = array())
 	{
@@ -114,7 +118,7 @@ class TestMockSession
 	 *
 	 * @return  mixed
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public static function mockGet($key, $default = null)
 	{

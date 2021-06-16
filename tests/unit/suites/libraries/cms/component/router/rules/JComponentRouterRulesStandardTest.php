@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Component
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -183,10 +187,15 @@ class JComponentRouterRulesStandardTest extends TestCaseDatabase
 					'view' => 'form',
 					'Itemid' => 263
 				),
+<<<<<<< HEAD
 				// TODO: I think this might be a bug? I think view should be unset whatever the status of the layout
 				array(
 					'option' => 'com_content',
 					'view' => 'form',
+=======
+				array(
+					'option' => 'com_content',
+>>>>>>> upstream/staging
 					'Itemid' => 263
 				),
 				array(
@@ -196,6 +205,38 @@ class JComponentRouterRulesStandardTest extends TestCaseDatabase
 			array(
 				array(
 					'option' => 'com_content',
+<<<<<<< HEAD
+=======
+					'view' => 'form',
+					'layout' => 'edit',
+					'Itemid' => 263
+				),
+				array(
+					'option' => 'com_content',
+					'Itemid' => 263
+				),
+				array(
+				),
+				'Error building a URL with layout=edit for a menu item that doesn\'t have a key'
+			),
+			array(
+				array(
+					'option' => 'com_content',
+					'view' => 'featured',
+					'Itemid' => 262
+				),
+				array(
+					'option' => 'com_content',
+					'Itemid' => 262
+				),
+				array(
+				),
+				'Error building a URL for featured that has a menu item without a key'
+			),
+			array(
+				array(
+					'option' => 'com_content',
+>>>>>>> upstream/staging
 					'id' => 19,
 					'Itemid' => 260
 				),

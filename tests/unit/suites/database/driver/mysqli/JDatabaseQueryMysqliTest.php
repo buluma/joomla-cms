@@ -3,22 +3,38 @@
  * @package     Joomla.UnitTest
  * @subpackage  Database
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 /**
  * Test class for JDatabaseQueryMysqli.
+<<<<<<< HEAD
 *
 * @package     Joomla.UnitTest
 * @subpackage  Database
 * @since       3.7.0
 */
+=======
+ *
+ * @package     Joomla.UnitTest
+ * @subpackage  Database
+ * @since       3.7.0
+ */
+>>>>>>> upstream/staging
 class JDatabaseQueryMysqliTest extends TestCase
 {
 	/**
 	 * @var    JDatabaseDriver  A mock of the JDatabaseDriver object for testing purposes.
+<<<<<<< HEAD
 	 * @since  13.1
+=======
+	 * @since  3.2.0
+>>>>>>> upstream/staging
 	 */
 	protected $dbo;
 
@@ -26,7 +42,11 @@ class JDatabaseQueryMysqliTest extends TestCase
 	 * The instance of the object to test.
 	 *
 	 * @var    JDatabaseQueryMysqli
+<<<<<<< HEAD
 	 * @since  12.3
+=======
+	 * @since  3.1.4
+>>>>>>> upstream/staging
 	 */
 	private $_instance;
 
@@ -37,7 +57,11 @@ class JDatabaseQueryMysqliTest extends TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   13.1
+=======
+	 * @since   3.2.0
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{

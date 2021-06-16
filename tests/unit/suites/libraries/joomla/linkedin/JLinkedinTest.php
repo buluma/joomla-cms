@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,31 +16,31 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
- * @since       13.1
+ * @since       3.2.0
  */
 class JLinkedinTest extends TestCase
 {
 	/**
 	 * @var    JRegistry  Options for the Linkedin object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  Mock http object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
 	/**
 	 * @var    JLinkedin  Object under test.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $object;
 
 	/**
 	 * @var JTLinkedinrOAuth Facebook OAuth 2 client
-	 * @since 13.1
+	 * @since 3.2.0
 	 */
 	protected $oauth;
 
@@ -88,7 +92,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetPeople()
 	{
@@ -103,7 +107,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetGroups()
 	{
@@ -118,7 +122,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetCompanies()
 	{
@@ -133,7 +137,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetJobs()
 	{
@@ -148,7 +152,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetStream()
 	{
@@ -163,7 +167,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetCommunications()
 	{
@@ -174,11 +178,11 @@ class JLinkedinTest extends TestCase
 	}
 
 	/**
-	 * Tests the magic __get method - other (non existant)
+	 * Tests the magic __get method - other (non existent)
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  InvalidArgumentException
 	 */
 	public function test__GetOther()
@@ -191,7 +195,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testSetOption()
 	{
@@ -208,7 +212,7 @@ class JLinkedinTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetOption()
 	{

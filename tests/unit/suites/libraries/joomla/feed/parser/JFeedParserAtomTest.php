@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Feed
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,19 +16,19 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Feed
- * @since       12.3
+ * @since       3.1.4
  */
 class JFeedParserAtomTest extends TestCase
 {
 	/**
 	 * @var    JFeedParserAtom
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_instance;
 
 	/**
 	 * @var    XMLReader
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_reader;
 
@@ -33,7 +37,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function seedInitialise()
 	{
@@ -48,7 +52,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleAuthor()
 	{
@@ -70,7 +74,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleContributor()
 	{
@@ -89,7 +93,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleGenerator()
 	{
@@ -110,7 +114,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleId()
 	{
@@ -131,7 +135,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleLink()
 	{
@@ -153,7 +157,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleRights()
 	{
@@ -174,7 +178,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleSubtitle()
 	{
@@ -195,7 +199,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleTitle()
 	{
@@ -216,7 +220,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleUpdated()
 	{
@@ -242,7 +246,7 @@ class JFeedParserAtomTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider  seedInitialise
-	 * @since         12.3
+	 * @since         3.1.4
 	 */
 	public function testInitialise($expected, $xml)
 	{
@@ -281,7 +285,7 @@ class JFeedParserAtomTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testProcessFeedEntry()
 	{
@@ -303,7 +307,11 @@ class JFeedParserAtomTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::setUp()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{
@@ -322,7 +330,11 @@ class JFeedParserAtomTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{

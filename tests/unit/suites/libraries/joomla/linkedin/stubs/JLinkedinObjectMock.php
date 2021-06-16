@@ -3,14 +3,18 @@
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 /**
  * @package     Joomla.UnitTest
  * @subpackage  Linkedin
- * @since       13.1
+ * @since       3.2.0
  */
 class JLinkedinObjectMock extends JLinkedinObject
 {

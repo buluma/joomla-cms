@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Log
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,7 +19,7 @@ require_once __DIR__ . '/stubs/callback/helper.php';
  *
  * @package     Joomla.Platform
  * @subpackage  Log
- * @since       12.2
+ * @since       3.0.1
  */
 class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 {
@@ -24,7 +28,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testConstructor01()
 	{
@@ -51,7 +55,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testConstructor02()
 	{
@@ -78,7 +82,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testConstructor03()
 	{
@@ -103,7 +107,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testConstructor04()
 	{
@@ -128,7 +132,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testConstructor05()
 	{
@@ -153,7 +157,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testConstructor06()
 	{
@@ -179,7 +183,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 * @expectedException  RuntimeException
 	 */
 	public function testConstructorForException()
@@ -194,7 +198,7 @@ class JLogLoggerCallbackTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  null
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testAddEntry()
 	{

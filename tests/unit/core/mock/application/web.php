@@ -2,7 +2,11 @@
 /**
  * @package    Joomla.Test
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -10,7 +14,7 @@
  * Class to mock JApplicationWeb.
  *
  * @package  Joomla.Test
- * @since    12.1
+ * @since    3.0.0
  */
 class TestMockApplicationWeb extends TestMockApplicationBase
 {
@@ -18,7 +22,7 @@ class TestMockApplicationWeb extends TestMockApplicationBase
 	 * Mock storage for the response body.
 	 *
 	 * @var    array
-	 * @since  12.2
+	 * @since  3.0.1
 	 */
 	public static $body = array();
 
@@ -148,7 +152,7 @@ class TestMockApplicationWeb extends TestMockApplicationBase
 	 *
 	 * @return  PHPUnit_Framework_MockObject_MockObject
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public static function create($test, $options = array())
 	{
@@ -180,7 +184,7 @@ class TestMockApplicationWeb extends TestMockApplicationBase
 	 *
 	 * @return  mixed
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public static function mockAppendBody($content)
 	{
@@ -194,7 +198,7 @@ class TestMockApplicationWeb extends TestMockApplicationBase
 	 *
 	 * @return  mixed
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public static function mockGetBody($asArray = false)
 	{
@@ -208,7 +212,7 @@ class TestMockApplicationWeb extends TestMockApplicationBase
 	 *
 	 * @return  mixed
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public static function mockPrependBody($content)
 	{
@@ -222,7 +226,7 @@ class TestMockApplicationWeb extends TestMockApplicationBase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public static function mockSetBody($content)
 	{

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Form
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,7 +19,7 @@ require_once __DIR__ . '/TestHelpers/JHtmlFieldUrl-helper-dataset.php';
  *
  * @package     Joomla.UnitTest
  * @subpackage  Form
- * @since       12.1
+ * @since       3.0.0
  */
 class JFormFieldUrlTest extends TestCaseDatabase
 {
@@ -87,7 +91,7 @@ class JFormFieldUrlTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 *
 	 * @dataProvider  getInputData
 	 */

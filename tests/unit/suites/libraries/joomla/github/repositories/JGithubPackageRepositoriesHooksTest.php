@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Github
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,43 +16,43 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Github
- * @since       12.3
+ * @since       3.1.4
  */
 class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 {
 	/**
 	 * @var    JRegistry  Options for the GitHub object.
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	protected $options;
 
 	/**
 	 * @var    JGithubHttp  Mock client object.
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	protected $client;
 
 	/**
 	 * @var    JHttpResponse  Mock response object.
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	protected $response;
 
 	/**
 	 * @var    JGithubPackageRepositoriesHooks  Object under test.
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	protected $object;
 
 	/**
 	 * @var    string  Sample JSON string.
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	protected $sampleString = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 
 	/**
 	 * @var    string  Sample JSON error message.
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	protected $errorString = '{"message": "Generic Error"}';
 
@@ -58,7 +62,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	protected function setUp()
 	{
@@ -76,7 +80,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testCreate()
 	{
@@ -105,7 +109,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testCreateFailure()
 	{
@@ -146,7 +150,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  RuntimeException
 	 */
@@ -160,7 +164,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testDelete()
 	{
@@ -183,7 +187,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testDeleteFailure()
 	{
@@ -218,7 +222,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testEdit()
 	{
@@ -251,7 +255,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testEditFailure()
 	{
@@ -296,7 +300,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  RuntimeException
 	 */
@@ -310,7 +314,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  RuntimeException
 	 */
@@ -324,7 +328,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  RuntimeException
 	 */
@@ -338,7 +342,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGet()
 	{
@@ -361,7 +365,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  DomainException
 	 */
@@ -383,7 +387,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetList()
 	{
@@ -406,7 +410,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  DomainException
 	 */
@@ -428,7 +432,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testTest()
 	{
@@ -451,7 +455,7 @@ class JGithubPackageRepositoriesHooksTest extends \PHPUnit\Framework\TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @expectedException  DomainException
 	 */

@@ -3,14 +3,22 @@
  * @package     Joomla.UnitTest
  * @subpackage  Session
  *
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 /**
  * Test class for JSessionStorageXcache.
  *
+<<<<<<< HEAD
  * @since  11.1
+=======
+ * @since  1.7.0
+>>>>>>> upstream/staging
  */
 class JSessionStorageXcacheTest extends \PHPUnit\Framework\TestCase
 {

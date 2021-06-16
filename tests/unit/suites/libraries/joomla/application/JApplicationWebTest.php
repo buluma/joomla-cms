@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Application
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,7 +20,7 @@ include_once __DIR__ . '/stubs/JApplicationWebInspector.php';
  *
  * @package     Joomla.UnitTest
  * @subpackage  Application
- * @since       11.3
+ * @since       1.7.3
  */
 class JApplicationWebTest extends TestCase
 {
@@ -24,7 +28,7 @@ class JApplicationWebTest extends TestCase
 	 * Value for test host.
 	 *
 	 * @var    string
-	 * @since  11.3
+	 * @since  1.7.3
 	 */
 	const TEST_HTTP_HOST = 'mydomain.com';
 
@@ -32,7 +36,7 @@ class JApplicationWebTest extends TestCase
 	 * Value for test user agent.
 	 *
 	 * @var    string
-	 * @since  11.3
+	 * @since  1.7.3
 	 */
 	const TEST_USER_AGENT = 'Mozilla/5.0';
 
@@ -40,7 +44,7 @@ class JApplicationWebTest extends TestCase
 	 * Value for test user agent.
 	 *
 	 * @var    string
-	 * @since  11.3
+	 * @since  1.7.3
 	 */
 	const TEST_REQUEST_URI = '/index.php';
 
@@ -48,7 +52,7 @@ class JApplicationWebTest extends TestCase
 	 * An instance of the class to test.
 	 *
 	 * @var    JApplicationWebInspector
-	 * @since  11.3
+	 * @since  1.7.3
 	 */
 	protected $class;
 
@@ -65,7 +69,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function getDetectRequestUriData()
 	{
@@ -83,14 +87,14 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function getRedirectData()
 	{
 		return array(
 			// Note: url, base, request, (expected result)
-			array('/foo', 'http://mydomain.com/', 'http://mydomain.com/index.php?v=11.3', 'http://mydomain.com/foo'),
-			array('foo', 'http://mydomain.com/', 'http://mydomain.com/index.php?v=11.3', 'http://mydomain.com/foo'),
+			array('/foo', 'http://mydomain.com/', 'http://mydomain.com/index.php?v=1.7.3', 'http://mydomain.com/foo'),
+			array('foo', 'http://mydomain.com/', 'http://mydomain.com/index.php?v=1.7.3', 'http://mydomain.com/foo'),
 		);
 	}
 
@@ -99,7 +103,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function setUp()
 	{
@@ -127,7 +131,11 @@ class JApplicationWebTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   11.1
+=======
+	 * @since   1.7.0
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{
@@ -151,7 +159,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function test__construct()
 	{
@@ -167,11 +175,11 @@ class JApplicationWebTest extends TestCase
 	}
 
 	/**
-	 * Tests the JApplicationWeb::__construct method with dependancy injection.
+	 * Tests the JApplicationWeb::__construct method with dependency injection.
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function test__constructDependancyInjection()
 	{
@@ -223,7 +231,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testAllowCache()
 	{
@@ -237,11 +245,11 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testAppendBody()
 	{
-		// Similulate a previous call to setBody or appendBody.
+		// Simulate a previous call to setBody or appendBody.
 		TestReflection::getValue($this->class, 'response')->body = array('foo');
 
 		$this->class->appendBody('bar');
@@ -258,7 +266,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testClearHeaders()
 	{
@@ -283,7 +291,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testClose()
 	{
@@ -301,7 +309,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCompressWithGzipEncoding()
 	{
@@ -338,7 +346,8 @@ class JApplicationWebTest extends TestCase
 		// Ensure that the compression headers were set.
 		$this->assertEquals(
 			array(
-				0 => array('name' => 'Content-Encoding', 'value' => 'gzip')
+				0 => array('name' => 'Content-Encoding', 'value' => 'gzip'),
+				1 => array('name' => 'Vary', 'value' => 'Accept-Encoding')
 			),
 			TestReflection::getValue($this->class, 'response')->headers
 		);
@@ -349,7 +358,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCompressWithDeflateEncoding()
 	{
@@ -386,7 +395,8 @@ class JApplicationWebTest extends TestCase
 		// Ensure that the compression headers were set.
 		$this->assertEquals(
 			array(
-				0 => array('name' => 'Content-Encoding', 'value' => 'deflate')
+				0 => array('name' => 'Content-Encoding', 'value' => 'deflate'),
+				1 => array('name' => 'Vary', 'value' => 'Accept-Encoding')
 			),
 			TestReflection::getValue($this->class, 'response')->headers
 		);
@@ -397,7 +407,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCompressWithNoAcceptEncodings()
 	{
@@ -443,7 +453,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCompressWithHeadersSent()
 	{
@@ -495,7 +505,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testCompressWithUnsupportedEncodings()
 	{
@@ -550,7 +560,7 @@ class JApplicationWebTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider getDetectRequestUriData
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testDetectRequestUri($https, $phpSelf, $requestUri, $httpHost, $scriptName, $queryString, $expects)
 	{
@@ -573,7 +583,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testExecuteWithoutDocument()
 	{
@@ -606,7 +616,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testExecuteWithDocument()
 	{
@@ -656,7 +666,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function getFetchConfigurationData()
 	{
@@ -679,7 +689,7 @@ class JApplicationWebTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider getFetchConfigurationData
-	 * @since    11.3
+	 * @since    1.7.3
 	 */
 	public function testFetchConfigurationData($file, $class, $expectsClass, $expects, $expectedException = false)
 	{
@@ -720,7 +730,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testGet()
 	{
@@ -737,7 +747,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testGetBody()
 	{
@@ -762,7 +772,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testGetHeaders()
 	{
@@ -785,7 +795,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testGetInstance()
 	{
@@ -805,7 +815,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testInitialiseWithDefaults()
 	{
@@ -823,7 +833,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testInitialiseWithFalse()
 	{
@@ -835,11 +845,11 @@ class JApplicationWebTest extends TestCase
 	}
 
 	/**
-	 * Tests the JApplicationWeb::initialise method with dependancy injection.
+	 * Tests the JApplicationWeb::initialise method with dependency injection.
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testInitialiseWithInjection()
 	{
@@ -901,7 +911,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadConfiguration()
 	{
@@ -924,7 +934,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadDocument()
 	{
@@ -941,7 +951,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadLanguage()
 	{
@@ -955,7 +965,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadSystemUrisWithSiteUriSet()
 	{
@@ -977,7 +987,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadSystemUrisWithoutSiteUriSet()
 	{
@@ -995,7 +1005,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadSystemUrisWithoutSiteUriWithMediaUriSet()
 	{
@@ -1017,7 +1027,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testLoadSystemUrisWithoutSiteUriWithRelativeMediaUriSet()
 	{
@@ -1039,11 +1049,11 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testPrependBody()
 	{
-		// Similulate a previous call to a body method.
+		// Simulate a previous call to a body method.
 		TestReflection::getValue($this->class, 'response')->body = array('foo');
 
 		$this->class->prependBody('bar');
@@ -1060,7 +1070,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRedirect()
 	{
@@ -1119,7 +1129,11 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 */
 	public function testRedirectWithExistingStatusCode1()
 	{
@@ -1187,7 +1201,11 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
+<<<<<<< HEAD
 	 * @since   11.3
+=======
+	 * @since   1.7.3
+>>>>>>> upstream/staging
 	 */
 	public function testRedirectWithExistingStatusCode2()
 	{	
@@ -1249,7 +1267,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRedirectWithHeadersSent()
 	{
@@ -1270,7 +1288,7 @@ class JApplicationWebTest extends TestCase
 		$this->class->redirect('index.php');
 		$buffer = ob_get_clean();
 
-		$this->assertEquals("<script>document.location.href='{$base}{$url}';</script>\n", $buffer);
+		$this->assertEquals("<script>document.location.href=" . json_encode($base . $url) . ";</script>\n", $buffer);
 	}
 
 	/**
@@ -1278,7 +1296,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRedirectWithJavascriptRedirect()
 	{
@@ -1299,7 +1317,7 @@ class JApplicationWebTest extends TestCase
 		$buffer = ob_get_clean();
 
 		$this->assertEquals(
-			'<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><script>document.location.href=\'' . $url . '\';</script></head><body></body></html>',
+			'<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><script>document.location.href=' . json_encode($url) . ';</script></head><body></body></html>',
 			trim($buffer)
 		);
 	}
@@ -1309,7 +1327,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRedirectWithMoved()
 	{
@@ -1367,7 +1385,7 @@ class JApplicationWebTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider  getRedirectData
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRedirectWithUrl($url, $base, $request, $expected)
 	{
@@ -1397,7 +1415,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRegisterEvent()
 	{
@@ -1417,7 +1435,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testRender()
 	{
@@ -1438,11 +1456,11 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSendHeaders()
 	{
-		// Similulate a previous call to a setHeader method.
+		// Simulate a previous call to a setHeader method.
 		TestReflection::getValue($this->class, 'response')->headers = array(
 			array('name' => 'Status', 'value' => 200),
 			array('name' => 'X-JWeb-SendHeaders', 'value' => 'foo'),
@@ -1464,7 +1482,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSet()
 	{
@@ -1482,7 +1500,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSetBody()
 	{
@@ -1500,7 +1518,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testSetHeader()
 	{
@@ -1542,7 +1560,7 @@ class JApplicationWebTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testIsSSLConnection()
 	{

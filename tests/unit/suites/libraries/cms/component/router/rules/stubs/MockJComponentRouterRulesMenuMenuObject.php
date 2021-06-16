@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Component
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -112,7 +116,10 @@ class MockJComponentRouterRulesMenuMenuObject
 			'parent_id'    => '0',
 			'query'        => array('option' => 'com_content', 'view' => 'featured'));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/staging
 		$this->items[52] = (object) array(
 			'id'           => '52',
 			'menutype'     => 'testmenu',

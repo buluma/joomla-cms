@@ -49,7 +49,11 @@ final class Version
 	 * @var    integer
 	 * @since  3.8.0
 	 */
+<<<<<<< HEAD
 	const PATCH_VERSION = 27;
+=======
+	const PATCH_VERSION = 28;
+>>>>>>> upstream/staging
 
 	/**
 	 * Extra release version info.
@@ -60,7 +64,11 @@ final class Version
 	 * @var    string
 	 * @since  3.8.0
 	 */
+<<<<<<< HEAD
 	const EXTRA_VERSION = '';
+=======
+	const EXTRA_VERSION = 'dev';
+>>>>>>> upstream/staging
 
 	/**
 	 * Release version.
@@ -78,7 +86,11 @@ final class Version
 	 * @since  3.5
 	 * @deprecated  4.0  Use separated version constants instead
 	 */
+<<<<<<< HEAD
 	const DEV_LEVEL = '27';
+=======
+	const DEV_LEVEL = '28-dev';
+>>>>>>> upstream/staging
 
 	/**
 	 * Development status.
@@ -86,7 +98,11 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
+<<<<<<< HEAD
 	const DEV_STATUS = 'Stable';
+=======
+	const DEV_STATUS = 'Development';
+>>>>>>> upstream/staging
 
 	/**
 	 * Build number.
@@ -111,7 +127,11 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
+<<<<<<< HEAD
 	const RELDATE = '25-May-2021';
+=======
+	const RELDATE = '24-May-2021';
+>>>>>>> upstream/staging
 
 	/**
 	 * Release time.
@@ -119,7 +139,11 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
+<<<<<<< HEAD
 	const RELTIME = '15:00';
+=======
+	const RELTIME = '11:29';
+>>>>>>> upstream/staging
 
 	/**
 	 * Release timezone.

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Database
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -62,7 +66,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__callQuote()
 	{
@@ -78,7 +82,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__callQuoteName()
 	{
@@ -94,7 +98,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__callUnknown()
 	{
@@ -110,7 +114,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetConnection()
 	{
@@ -145,7 +149,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetCount()
 	{
@@ -162,7 +166,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetDatabase()
 	{
@@ -177,7 +181,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetDateFormat()
 	{
@@ -192,7 +196,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSplitSql()
 	{
@@ -215,7 +219,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetLog()
 	{
@@ -232,7 +236,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetPrefix()
 	{
@@ -247,7 +251,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testGetNullDate()
 	{
@@ -262,13 +266,13 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetMinimum()
 	{
 		$this->assertThat(
 			$this->db->getMinimum(),
-			$this->equalTo('12.1'),
+			$this->equalTo('3.0.0'),
 			'getMinimum should return a string with the minimum supported database version number'
 		);
 	}
@@ -278,7 +282,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testIsMinimumVersion()
 	{
@@ -294,7 +298,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSetDebug()
 	{
@@ -310,7 +314,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSetQuery()
 	{
@@ -326,7 +330,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testReplacePrefix()
 	{
@@ -350,7 +354,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 * @return  void
 	 *
 	 * @covers  JDatabaseDriver::quote
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuote()
 	{
@@ -378,7 +382,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuoteBooleanTrue()
 	{
@@ -394,7 +398,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuoteBooleanFalse()
 	{
@@ -410,7 +414,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuoteNull()
 	{
@@ -425,7 +429,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuoteInteger()
 	{
@@ -441,13 +445,15 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuoteFloat()
 	{
+		// This call `escape()` method from nosqldriver, which is locale aware
 		$this->assertThat(
+			// Below line may generate "'-3.14-'" or "'-3,14-'"
 			$this->db->quote(3.14),
-			$this->equalTo("'-3.14-'"),
+			$this->equalTo("'-" . 3.14 . "-'"),
 			'Tests handling of float with escaping (default).'
 		);
 	}
@@ -457,7 +463,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.4
+	 * @since   2.5.0
 	 */
 	public function testQuoteName()
 	{
@@ -517,7 +523,7 @@ class JDatabaseDriverTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testTruncateTable()
 	{

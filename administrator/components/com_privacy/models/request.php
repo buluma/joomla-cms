@@ -427,6 +427,12 @@ class PrivacyModelRequest extends JModelAdmin
 			return false;
 		}
 
+<<<<<<< HEAD
+=======
+		// Make sure the status is always 0
+		$validatedData['status'] = 0;
+
+>>>>>>> upstream/staging
 		// The user cannot create a request for their own account
 		if (strtolower(JFactory::getUser()->email) === strtolower($validatedData['email']))
 		{

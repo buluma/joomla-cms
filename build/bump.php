@@ -17,7 +17,11 @@
  * - /usr/bin/php /path/to/joomla-cms/build/bump.php -v 3.7.0
  *
  * @package    Joomla.Build
+<<<<<<< HEAD
  * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright  Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -36,25 +40,30 @@ function usage($command)
 const PHP_TAB = "\t";
 
 // File paths.
+<<<<<<< HEAD
 $versionFile      = '/libraries/src/Version.php';
+=======
+$versionFile = '/libraries/src/Version.php';
+>>>>>>> upstream/staging
 
-$coreXmlFiles     = array(
-			'/administrator/manifests/files/joomla.xml',
-			);
+$coreXmlFiles = array(
+	'/administrator/manifests/files/joomla.xml',
+);
 
 $languageXmlFiles = array(
-			'/language/en-GB/en-GB.xml',
-			'/language/en-GB/install.xml',
-			'/administrator/language/en-GB/en-GB.xml',
-			'/administrator/language/en-GB/install.xml',
-			'/installation/language/en-GB/en-GB.xml',
-			);
+	'/language/en-GB/en-GB.xml',
+	'/language/en-GB/install.xml',
+	'/administrator/language/en-GB/en-GB.xml',
+	'/administrator/language/en-GB/install.xml',
+	'/installation/language/en-GB/en-GB.xml',
+);
 
 $languagePackXmlFile = '/administrator/manifests/packages/pkg_en-GB.xml';
 
 $antJobFile = '/build.xml';
 
 $readMeFiles = array(
+<<<<<<< HEAD
 			'/README.md',
 			'/README.txt',
 			);
@@ -72,6 +81,32 @@ $directoryLoopExcludeDirectories = array(
 
 $directoryLoopExcludeFiles = array(
 			);
+=======
+	'/README.md',
+	'/README.txt',
+);
+
+/*
+ * Change copyright date exclusions.
+ * Some systems may try to scan the .git directory, exclude it.
+ * Also exclude build resources such as the packaging space or the API documentation build
+ * as well as external libraries.
+ */
+$directoryLoopExcludeDirectories = array(
+	'/.git',
+	'/build/api/',
+	'/build/coverage/',
+	'/build/tmp/',
+	'/libraries/vendor/',
+	'/libraries/phputf8/',
+	'/libraries/php-encryption/',
+	'/libraries/phpass/',
+	'/libraries/idna_convert/',
+	'/libraries/fof/',
+);
+
+$directoryLoopExcludeFiles = array();
+>>>>>>> upstream/staging
 
 // Check arguments (exit if incorrect cli arguments).
 $opts = getopt("v:c:");
@@ -150,6 +185,7 @@ else
 $versionSubParts = explode('.', $versionParts[0]);
 
 $version = array(
+<<<<<<< HEAD
 		'main'       => $versionSubParts[0] . '.' . $versionSubParts[1],
 		'major'      => $versionSubParts[0],
 		'minor'      => $versionSubParts[1],
@@ -164,6 +200,22 @@ $version = array(
 		'reltz'      => 'GMT',
 		'credate'    => date('F Y'),
 		);
+=======
+	'main'       => $versionSubParts[0] . '.' . $versionSubParts[1],
+	'major'      => $versionSubParts[0],
+	'minor'      => $versionSubParts[1],
+	'patch'      => $versionSubParts[2],
+	'extra'      => (!empty($versionParts[1]) ? $versionParts[1] : '') . (!empty($versionParts[2]) ? (!empty($versionParts[1]) ? '-' : '') . $versionParts[2] : ''),
+	'release'    => $versionSubParts[0] . '.' . $versionSubParts[1] . '.' . $versionSubParts[2],
+	'dev_devel'  => $versionSubParts[2] . (!empty($versionParts[1]) ? '-' . $versionParts[1] : '') . (!empty($versionParts[2]) ? '-' . $versionParts[2] : ''),
+	'dev_status' => $dev_status,
+	'build'      => '',
+	'reldate'    => date('j-F-Y'),
+	'reltime'    => date('H:i'),
+	'reltz'      => 'GMT',
+	'credate'    => date('F Y'),
+);
+>>>>>>> upstream/staging
 
 // Version Codename.
 if (!empty($opts['c']))
@@ -173,21 +225,23 @@ if (!empty($opts['c']))
 
 // Prints version information.
 echo PHP_EOL;
-echo 'Version data:'. PHP_EOL;
+echo 'Version data:' . PHP_EOL;
 echo '- Main:' . PHP_TAB . PHP_TAB . PHP_TAB . $version['main'] . PHP_EOL;
 echo '- Release:' . PHP_TAB . PHP_TAB . $version['release'] . PHP_EOL;
-echo '- Full:'  . PHP_TAB . PHP_TAB . PHP_TAB . $version['main'] . '.' . $version['dev_devel'] . PHP_EOL;
+echo '- Full:' . PHP_TAB . PHP_TAB . PHP_TAB . $version['main'] . '.' . $version['dev_devel'] . PHP_EOL;
 echo '- Build:' . PHP_TAB . PHP_TAB . $version['build'] . PHP_EOL;
 echo '- Dev Level:' . PHP_TAB . PHP_TAB . $version['dev_devel'] . PHP_EOL;
 echo '- Dev Status:' . PHP_TAB . PHP_TAB . $version['dev_status'] . PHP_EOL;
 echo '- Release date:' . PHP_TAB . PHP_TAB . $version['reldate'] . PHP_EOL;
 echo '- Release time:' . PHP_TAB . PHP_TAB . $version['reltime'] . PHP_EOL;
-echo '- Release timezone:'  . PHP_TAB . $version['reltz'] . PHP_EOL;
+echo '- Release timezone:' . PHP_TAB . $version['reltz'] . PHP_EOL;
 echo '- Creation date:' . PHP_TAB . $version['credate'] . PHP_EOL;
+
 if (!empty($version['codename']))
 {
 	echo '- Codename:' . PHP_TAB . PHP_TAB . $version['codename'] . PHP_EOL;
 }
+
 echo PHP_EOL;
 
 $rootPath = dirname(__DIR__);
@@ -207,10 +261,12 @@ if (file_exists($rootPath . $versionFile))
 	$fileContents = preg_replace("#RELDATE\s*=\s*'[^\']*'#", "RELDATE = '" . $version['reldate'] . "'", $fileContents);
 	$fileContents = preg_replace("#RELTIME\s*=\s*'[^\']*'#", "RELTIME = '" . $version['reltime'] . "'", $fileContents);
 	$fileContents = preg_replace("#RELTZ\s*=\s*'[^\']*'#", "RELTZ = '" . $version['reltz'] . "'", $fileContents);
+
 	if (!empty($version['codename']))
 	{
 		$fileContents = preg_replace("#CODENAME\s*=\s*'[^\']*'#", "CODENAME = '" . $version['codename'] . "'", $fileContents);
 	}
+
 	file_put_contents($rootPath . $versionFile, $fileContents);
 }
 
@@ -271,8 +327,13 @@ foreach ($readMeFiles as $readMeFile)
 $changedFilesCopyrightDate = 0;
 $changedFilesSinceVersion  = 0;
 $year                      = date('Y');
+<<<<<<< HEAD
 $directory                 = new \RecursiveDirectoryIterator($rootPath);
 $iterator                  = new \RecursiveIteratorIterator($directory, RecursiveIteratorIterator::SELF_FIRST);
+=======
+$directory                 = new RecursiveDirectoryIterator($rootPath);
+$iterator                  = new RecursiveIteratorIterator($directory, RecursiveIteratorIterator::SELF_FIRST);
+>>>>>>> upstream/staging
 
 foreach ($iterator as $file)
 {
@@ -313,6 +374,7 @@ foreach ($iterator as $file)
 			// Load the file.
 			$fileContents = file_get_contents($filePath);
 
+<<<<<<< HEAD
 			// Check if need to change the copyright date.
 			if (preg_match('#2005\s+-\s+[0-9]{4}\s+Open\s+Source\s+Matters#', $fileContents) && !preg_match('#2005\s+-\s+' . $year. '\s+Open\s+Source\s+Matters#', $fileContents))
 			{
@@ -321,6 +383,8 @@ foreach ($iterator as $file)
 				$changedFilesCopyrightDate++;
 			}
 
+=======
+>>>>>>> upstream/staging
 			// Check if need to change the since version.
 			if ($relativePath !== '/build/bump.php' && preg_match('#__DEPLOY_VERSION__#', $fileContents))
 			{
@@ -344,10 +408,18 @@ if ($changedFilesCopyrightDate > 0 || $changedFilesSinceVersion > 0)
 	{
 		echo '- Copyright Date changed in ' . $changedFilesCopyrightDate . ' files.' . PHP_EOL;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/staging
 	if ($changedFilesSinceVersion > 0)
 	{
 		echo '- Since Version changed in ' . $changedFilesSinceVersion . ' files.' . PHP_EOL;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/staging
 	echo PHP_EOL;
 }
 

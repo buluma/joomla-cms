@@ -101,7 +101,12 @@ class NomenuRules implements RulesInterface
 		{
 			$item = $this->router->menu->getItem($query['Itemid']);
 
+<<<<<<< HEAD
 			if (!isset($query['option']) || ($item && $item->query['option'] === $query['option']))
+=======
+			if (!isset($query['option'])
+				|| ($item && isset($item->query['option']) && $item->query['option'] === $query['option']))
+>>>>>>> upstream/staging
 			{
 				$menu_found = true;
 			}

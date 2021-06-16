@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Feed
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,19 +16,19 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Feed
- * @since       12.3
+ * @since       3.1.4
  */
 class JFeedParserRssTest extends TestCase
 {
 	/**
 	 * @var    JFeedParserRss
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_instance;
 
 	/**
 	 * @var    XMLReader
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_reader;
 
@@ -33,7 +37,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function seedInitialise()
 	{
@@ -49,7 +53,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  array
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function seedProcessPerson()
 	{
@@ -66,7 +70,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleCategory()
 	{
@@ -90,7 +94,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleCloud()
 	{
@@ -130,7 +134,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleCopyright()
 	{
@@ -151,7 +155,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleDescription()
 	{
@@ -172,7 +176,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleGenerator()
 	{
@@ -193,7 +197,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleImage()
 	{
@@ -227,7 +231,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleLanguage()
 	{
@@ -248,7 +252,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleLastBuildDate()
 	{
@@ -270,7 +274,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleLink()
 	{
@@ -292,7 +296,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleManagingEditor()
 	{
@@ -313,7 +317,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandlePubDate()
 	{
@@ -335,7 +339,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleSkipDays()
 	{
@@ -359,7 +363,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleSkipHours()
 	{
@@ -383,7 +387,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleTitle()
 	{
@@ -404,7 +408,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleTtl()
 	{
@@ -425,7 +429,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testHandleWebmaster()
 	{
@@ -448,7 +452,7 @@ class JFeedParserRssTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider  seedInitialise
-	 * @since         12.3
+	 * @since         3.1.4
 	 */
 	public function testInitialise($expected, $xml)
 	{
@@ -487,7 +491,7 @@ class JFeedParserRssTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testProcessFeedEntry()
 	{
@@ -532,7 +536,7 @@ class JFeedParserRssTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider  seedProcessPerson
-	 * @since         12.3
+	 * @since         3.1.4
 	 */
 	public function testProcessPerson($input, $name, $email)
 	{
@@ -550,7 +554,11 @@ class JFeedParserRssTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::setUp()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{
@@ -569,7 +577,11 @@ class JFeedParserRssTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{

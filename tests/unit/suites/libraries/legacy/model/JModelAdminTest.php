@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Model
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,20 +17,20 @@
  * @package     Joomla.UnitTest
  * @subpackage  Model
  *
- * @since       12.3
+ * @since       3.1.4
  */
 class JModelAdminTest extends TestCase
 {
 	/**
 	 * @var    JModelAdmin
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	public $object;
 
 	/**
 	 * Setup each test.
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 *
 	 * @return  void
 	 */

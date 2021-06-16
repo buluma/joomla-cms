@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  HTML
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -178,8 +182,13 @@ class JHtmlTest extends TestCase
 	{
 		// Build the mock object.
 		$registered = $this->getMockBuilder('MyHtmlClass')
+<<<<<<< HEAD
 					->setMethods(array('mockFunction'))
 					->getMock();
+=======
+			->setMethods(array('mockFunction'))
+			->getMock();
+>>>>>>> upstream/staging
 
 		// Test that we can register the method
 		$this->assertTrue(
@@ -210,8 +219,13 @@ class JHtmlTest extends TestCase
 	{
 		// Build the mock object to Register a method so we can unregister it.
 		$registered = $this->getMockBuilder('MyHtmlClass')
+<<<<<<< HEAD
 					->setMethods(array('mockFunction'))
 					->getMock();
+=======
+			->setMethods(array('mockFunction'))
+			->getMock();
+>>>>>>> upstream/staging
 
 		JHtml::register('prefix.unregister.testfunction', array($registered, 'mockFunction'));
 
@@ -237,8 +251,13 @@ class JHtmlTest extends TestCase
 	{
 		// Build the mock object.
 		$registered = $this->getMockBuilder('MyHtmlClass')
+<<<<<<< HEAD
 					->setMethods(array('mockFunction'))
 					->getMock();
+=======
+			->setMethods(array('mockFunction'))
+			->getMock();
+>>>>>>> upstream/staging
 
 		// Test that we can register the method.
 		JHtml::register('prefix.isregistered.method', array($registered, 'mockFunction'));

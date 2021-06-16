@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Controller
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,13 +18,13 @@ JLoader::register('BaseController', __DIR__ . '/stubs/tbase.php');
  *
  * @package     Joomla.UnitTest
  * @subpackage  Controller
- * @since       12.1
+ * @since       3.0.0
  */
 class JControllerBaseTest extends TestCase
 {
 	/**
 	 * @var    JControllerBase
-	 * @since  12.1
+	 * @since  3.0.0
 	 */
 	private $_instance;
 
@@ -29,7 +33,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function test__construct()
 	{
@@ -51,7 +55,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetApplication()
 	{
@@ -64,7 +68,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetInput()
 	{
@@ -77,7 +81,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testSerialise()
 	{
@@ -89,7 +93,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testUnserialise()
 	{
@@ -104,7 +108,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 * @expectedException  UnexpectedValueException
 	 */
 	public function testUnserialise_exception()
@@ -117,7 +121,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testLoadApplication()
 	{
@@ -130,7 +134,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testLoadInput()
 	{
@@ -145,7 +149,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function setUp()
 	{
@@ -166,7 +170,7 @@ class JControllerBaseTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	protected function tearDown()
 	{

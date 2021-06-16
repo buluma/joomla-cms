@@ -3,7 +3,11 @@
  * @package     Joomla.Platform
  * @subpackage  Session
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -31,7 +35,7 @@ class JSessionHandlerArray implements JSessionHandlerInterface
 	protected $name;
 
 	/**
-	 * Has the session heen started
+	 * Has the session been started
 	 *
 	 * @var  bool
 	 */

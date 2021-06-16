@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Base
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,7 +17,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Object
- * @since       11.1
+ * @since       1.7.0
  */
 class JObjectTest extends \PHPUnit\Framework\TestCase
 {

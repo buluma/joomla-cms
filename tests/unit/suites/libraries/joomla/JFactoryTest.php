@@ -2,7 +2,11 @@
 /**
  * @package     Joomla.UnitTest
  * @subpackage  Utilities
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -11,7 +15,7 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Utilities
- * @since       11.3
+ * @since       1.7.3
  */
 class JFactoryTest extends TestCaseDatabase
 {
@@ -22,7 +26,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function setUp()
 	{
@@ -38,7 +42,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function tearDown()
 	{
@@ -52,7 +56,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   11.3
+	 * @since   1.7.3
 	 */
 	public function testGetConfig()
 	{
@@ -74,7 +78,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetLanguage()
 	{
@@ -96,7 +100,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetDocument()
 	{
@@ -116,7 +120,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetCache()
 	{
@@ -144,7 +148,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetAcl()
 	{
@@ -160,7 +164,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.1
+	 * @since   3.0.0
 	 */
 	public function testGetUri()
 	{
@@ -176,7 +180,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.2
+	 * @since   3.0.1
 	 */
 	public function testGetXml()
 	{
@@ -194,7 +198,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetDateUnchanged()
 	{
@@ -216,7 +220,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetDateNow()
 	{
@@ -238,7 +242,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetDateUTC1()
 	{
@@ -259,7 +263,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetDateUTC2()
 	{
@@ -280,7 +284,7 @@ class JFactoryTest extends TestCaseDatabase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testGetUserInstance()
 	{

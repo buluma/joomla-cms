@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Facebook
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,31 +18,31 @@ use Joomla\Registry\Registry;
  *
  * @package     Joomla.UnitTest
  * @subpackage  Facebook
- * @since       13.1
+ * @since       3.2.0
  */
 class JFacebookTest extends TestCase
 {
 	/**
 	 * @var    Registry  Options for the Facebook object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  The HTTP client object to use in sending HTTP requests.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
 	/**
 	* @var    JFacebook  Object under test.
-	* @since  13.1
+	* @since  3.2.0
 	*/
 	protected $object;
 
 	/**
 	 * @var    JFacebookOAuth  Facebook OAuth 2 client
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $oauth;
 
@@ -55,7 +59,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	protected function setUp()
 	{
@@ -93,7 +97,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetUser()
 	{
@@ -108,7 +112,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetStatus()
 	{
@@ -123,7 +127,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetCheckin()
 	{
@@ -138,7 +142,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetEvent()
 	{
@@ -153,7 +157,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetGroup()
 	{
@@ -168,7 +172,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetLink()
 	{
@@ -183,7 +187,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetNote()
 	{
@@ -198,7 +202,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetPost()
 	{
@@ -213,7 +217,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetComment()
 	{
@@ -228,7 +232,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetPhoto()
 	{
@@ -243,7 +247,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetVideo()
 	{
@@ -258,7 +262,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function test__GetAlbum()
 	{
@@ -273,7 +277,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException  InvalidArgumentException
 	 */
 	public function test__GetOther()
@@ -286,7 +290,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testSetOption()
 	{
@@ -303,7 +307,7 @@ class JFacebookTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testGetOption()
 	{

@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  OAuth
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -17,25 +21,25 @@ include_once __DIR__ . '/../session/handler/array.php';
  *
  * @package     Joomla.UnitTest
  * @subpackage  OAuth
- * @since       13.1
+ * @since       3.2.0
  */
 class JOAuth1ClientTest extends TestCase
 {
 	/**
 	 * @var    JInput  input for the OAuth object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $input;
 
 	/**
 	 * @var    Registry  Options for the OAuth object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $options;
 
 	/**
 	 * @var    JHttp  Mock http object.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $client;
 
@@ -43,25 +47,25 @@ class JOAuth1ClientTest extends TestCase
 	 * An instance of the object to test.
 	 *
 	 * @var    JOAuth1ClientInspector
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $object;
 
 	/**
 	 * @var    JApplicationWeb  The application object to send HTTP headers for redirects.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $application;
 
 	/**
 	 * @var    string  Sample JSON string.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $sampleString = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 
 	/**
 	 * @var    string  Sample JSON error message.
-	 * @since  13.1
+	 * @since  3.2.0
 	 */
 	protected $errorString = '{"errorCode":401, "message": "Generic error"}';
 
@@ -122,7 +126,7 @@ class JOAuth1ClientTest extends TestCase
 	*
 	* @return array
 	*
-	* @since 13.1
+	* @since 3.2.0
 	*/
 	public function seedAuthenticate()
 	{
@@ -145,7 +149,7 @@ class JOAuth1ClientTest extends TestCase
 	 * @return  void
 	 *
 	 * @dataProvider seedAuthenticate
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testAuthenticate($token, $fail, $version)
 	{
@@ -259,7 +263,7 @@ class JOAuth1ClientTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 * @expectedException DomainException
 	 */
 	public function testGenerateRequestTokenFailure()
@@ -283,7 +287,7 @@ class JOAuth1ClientTest extends TestCase
 	*
 	* @return array
 	*
-	* @since 13.1
+	* @since 3.2.0
 	*/
 	public function seedOauthRequest()
 	{
@@ -303,7 +307,7 @@ class JOAuth1ClientTest extends TestCase
 	 * @dataProvider seedOauthRequest
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testOauthRequest($method)
 	{
@@ -344,7 +348,7 @@ class JOAuth1ClientTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   13.1
+	 * @since   3.2.0
 	 */
 	public function testSafeEncodeEmpty()
 	{

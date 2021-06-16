@@ -3,7 +3,11 @@
  * @package     Joomla.UnitTest
  * @subpackage  Feed
  *
+<<<<<<< HEAD
  * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+=======
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+>>>>>>> upstream/staging
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,13 +16,13 @@
  *
  * @package     Joomla.UnitTest
  * @subpackage  Feed
- * @since       12.3
+ * @since       3.1.4
  */
 class JFeedEntryTest extends TestCase
 {
 	/**
 	 * @var    JFeedEntry
-	 * @since  12.3
+	 * @since  3.1.4
 	 */
 	private $_instance;
 
@@ -27,7 +31,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicGetSet()
 	{
@@ -45,7 +49,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicGetNull()
 	{
@@ -57,7 +61,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetUpdatedDateString()
 	{
@@ -73,7 +77,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetUpdatedDateJDateObject()
 	{
@@ -91,7 +95,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetAuthorWithPerson()
 	{
@@ -111,7 +115,7 @@ class JFeedEntryTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testMagicSetAuthorWithInvalidAuthor()
 	{
@@ -124,7 +128,7 @@ class JFeedEntryTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testMagicSetSourceWithInvalidSource()
 	{
@@ -137,7 +141,7 @@ class JFeedEntryTest extends TestCase
 	 * @return  void
 	 *
 	 * @expectedException  InvalidArgumentException
-	 * @since              12.3
+	 * @since              3.1.4
 	 */
 	public function testMagicSetCategoriesWithInvalidProperty()
 	{
@@ -149,7 +153,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testMagicSetGeneral()
 	{
@@ -165,7 +169,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testAddCategory()
 	{
@@ -181,7 +185,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testAddContributor()
 	{
@@ -210,7 +214,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testAddLink()
 	{
@@ -240,7 +244,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRemoveCategory()
 	{
@@ -262,7 +266,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRemoveContributor()
 	{
@@ -287,7 +291,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testRemoveLink()
 	{
@@ -312,7 +316,7 @@ class JFeedEntryTest extends TestCase
 	 *
 	 * @return  void
 	 *
-	 * @since   12.3
+	 * @since   3.1.4
 	 */
 	public function testSetAuthor()
 	{
@@ -331,7 +335,11 @@ class JFeedEntryTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::setUp()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function setUp()
 	{
@@ -346,7 +354,11 @@ class JFeedEntryTest extends TestCase
 	 * @return  void
 	 *
 	 * @see     \PHPUnit\Framework\TestCase::tearDown()
+<<<<<<< HEAD
 	 * @since   12.3
+=======
+	 * @since   3.1.4
+>>>>>>> upstream/staging
 	 */
 	protected function tearDown()
 	{
