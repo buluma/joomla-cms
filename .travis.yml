@@ -14,13 +14,13 @@ matrix:
   fast_finish: true
   include:
     # Requires older Precise image
-    - php: 5.3
-      env:
-        - INSTALL_APC="yes"
-        - INSTALL_APCU="no"
-        - INSTALL_MEMCACHE="yes"
-      sudo: true
-      dist: precise
+    # - php: 5.3
+    #  env:
+    #    - INSTALL_APC="yes"
+    #    - INSTALL_APCU="no"
+    #    - INSTALL_MEMCACHE="yes"
+    #  sudo: true
+    #  dist: precise
     # The new Trusty image has issues with running APC, do not enable it here
     - php: 5.4
       env:
